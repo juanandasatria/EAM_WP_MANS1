@@ -1,0 +1,45 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.ui.comp.valuehelpdialog" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:fb="sap.ui.comp.filterbar">
+	<ValueHelpDialog id="permitVHAddTechObj" title="{i18n>TechObjVHTitle}" ok=".handleConfirmTechObj" cancel=".handleClose"
+		supportMultiselect="true" key="TechnicalObjectLabel" descriptionKey="TechnicalObjectDescription" supportRanges="false">
+		<filterBar>
+			<fb:FilterBar id="permitFilterBarTechObj" filterBarExpanded="false" advancedMode="true" search=".onFilterBarSearch">
+				<fb:filterGroupItems>
+					<fb:FilterGroupItem id="TechObjectlabel" groupName="__$INTERNAL$" name="TechnicalObjectLabel" label="{i18n>Title.TechObj}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Title.TechObj}">
+						<fb:control>
+							<m:Input id="idTechObjLbl" name="TechnicalObjectLabel" placeholder="{i18n>Title.TechObj}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="TechObjecttype" groupName="__$INTERNAL$" name="TechObjIsEquipOrFuncnlLoc" label="{i18n>Title.TechObjType}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Title.TechObjType}">
+						<fb:control>
+							<m:MultiComboBox id="idTechObjTyp" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="350px">
+								<m:items>
+									<core:Item key="EAMS_EQUI" text="{i18n>EquipmentText}"></core:Item>
+									<core:Item key="EAMS_FL" text="{i18n>FunctionalLocationText}"></core:Item>
+								</m:items>
+							</m:MultiComboBox>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="TechObjectDesc" groupName="__$INTERNAL$" name="TechnicalObjectDescription" label="{i18n>Title.TechObjDescription}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Title.TechObjDescription}">
+						<fb:control>
+							<m:Input id="idTechObjtDes" name="TechnicalObjectDescription" placeholder="{i18n>Title.TechObjDescription}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="Workcenter" groupName="__$INTERNAL$" name="WorkCenter" label="{i18n>Title.TechWorkCenter}" visibleInFilterBar="true"
+						controlTooltip="{i18n>Title.TechWorkCenter}">
+						<fb:control>
+							<m:Input id="idWorkcenter" name="WorkCenter" placeholder="{i18n>Title.TechWorkCenter}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+				</fb:filterGroupItems>
+			</fb:FilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>

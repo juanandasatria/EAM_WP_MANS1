@@ -1,0 +1,39 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.ui.comp.valuehelpdialog" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:fb="sap.ui.comp.filterbar">
+	<ValueHelpDialog title="{i18n>OperationsDialogTitle}" supportMultiselect='true' ok=".onOperationValueHelpOkPress"
+		cancel=".onOperationValueHelpCancelPress" afterClose=".onOperationValueHelpCancelPress" key="MaintenanceOrderOperation"
+		descriptionKey="OperationDescription">
+		<filterBar>
+			<fb:FilterBar advancedMode="true" search=".onOperationsFilterBarSearch">
+				<fb:filterGroupItems>
+					<fb:FilterGroupItem groupName="__$INTERNAL$" name="MaintenanceOrderOperation" label="{i18n>OperationFilterItemText}"
+						visibleInFilterBar="true" controlTooltip="{i18n>OperationFilterItemText}">
+						<fb:control>
+							<m:Input name="MaintenanceOrderOperation" placeholder="{i18n>OperationFilterItemText}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem groupName="__$INTERNAL$" name="OperationDescription" label="{i18n>OperationDcriptionFilterItemText}"
+						visibleInFilterBar="true" controlTooltip="{i18n>OperationDcriptionFilterItemText}">
+						<fb:control>
+							<m:Input name="OperationDescription" placeholder="{i18n>OperationDcriptionFilterItemText}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem groupName="__$INTERNAL$" name="WorkCenter" label="{i18n>WorkCenterFilterItemText}" visibleInFilterBar="true" controlTooltip="{i18n>WorkCenterFilterItemText}">
+						<fb:control>
+							<m:Input name="WorkCenter" placeholder="{i18n>WorkCenterFilterItemText}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem groupName="__$INTERNAL$" name="PlantName" label="{i18n>PlantNameFilterItemText}" visibleInFilterBar="true" controlTooltip="{i18n>PlantNameFilterItemText}">
+						<fb:control>
+							<m:Input name="Plant" placeholder="{i18n>PlantNameFilterItemText}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+				</fb:filterGroupItems>
+			</fb:FilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>

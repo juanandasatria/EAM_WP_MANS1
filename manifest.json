@@ -1,0 +1,384 @@
+{
+ "_version": "1.8.0",
+ "sap.app": {
+  "id": "i2d.eam.workpermit.manages1",
+  "type": "application",
+  "i18n": "i18n/i18n.properties",
+  "applicationVersion": {
+   "version": "12.1.56"
+  },
+  "title": "{{appTitle}}",
+  "description": "{{appDescription}}",
+  "tags": {
+   "keywords": []
+  },
+  "ach": "PM-FIO",
+  "resources": "resources.json",
+  "dataSources": {
+   "mainService": {
+    "uri": "/sap/opu/odata/sap/UI_WORKPERMIT/",
+    "type": "OData",
+    "settings": {
+     "annotations": [
+      "UI_WORKPERMIT_VAN",
+      "annotation1"
+     ],
+     "localUri": "localService/metadata.xml"
+    }
+   },
+   "UI_WORKPERMIT_VAN": {
+    "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='UI_WORKPERMIT_VAN',Version='0001')/$value/",
+    "type": "ODataAnnotation",
+    "settings": {
+     "localUri": "localService/UI_WORKPERMIT_VAN.xml"
+    }
+   },
+   "annotation1": {
+    "type": "ODataAnnotation",
+    "uri": "annotations/annotation1.xml",
+    "settings": {
+     "localUri": "annotations/annotation1.xml"
+    }
+   }
+  },
+  "offline": false,
+  "crossNavigation": {
+   "inbounds": {},
+   "outbounds": {
+    "ApplicationLog": {
+     "semanticObject": "WorkPermit",
+     "action": "showApllLogList"
+    },
+    "MaintenanceOrderDisplay": {
+     "semanticObject": "MaintenanceOrder",
+     "action": "displayFactSheet"
+    }
+   }
+  },
+  "sourceTemplate": {
+   "id": "servicecatalog.connectivityComponentForManifest",
+   "version": "0.0.0"
+  }
+ },
+ "sap.ui": {
+  "technology": "UI5",
+  "icons": {
+   "icon": "",
+   "favIcon": "",
+   "phone": "",
+   "phone@2": "",
+   "tablet": "",
+   "tablet@2": ""
+  },
+  "deviceTypes": {
+   "desktop": true,
+   "tablet": true,
+   "phone": false
+  },
+  "supportedThemes": [
+   "sap_fiori_3"
+  ]
+ },
+ "sap.ui5": {
+  "resources": {
+   "js": [],
+   "css": []
+  },
+  "dependencies": {
+   "minUI5Version": "1.120.2",
+   "libs": {
+    "sap.ui.core": {
+     "lazy": false
+    },
+    "sap.ui.generic.app": {
+     "lazy": false
+    },
+    "sap.suite.ui.generic.template": {
+     "lazy": false
+    },
+    "sap.ui.comp": {
+     "lazy": false
+    },
+    "sap.ui.table": {
+     "lazy": false
+    },
+    "sap.m": {
+     "lazy": false
+    },
+    "sap.ui.layout": {
+     "lazy": false
+    },
+    "sap.se.mi.plm.lib.attachmentservice": {
+     "lazy": false
+    },
+    "sap.ui.fl": {}
+   },
+   "components": {
+    "sap.se.mi.plm.lib.attachmentservice.attachment.components.stcomponent": {
+     "lazy": false
+    }
+   }
+  },
+  "componentUsages": {
+   "attachmentReuseComponent": {
+    "name": "sap.se.mi.plm.lib.attachmentservice.attachment.components.stcomponent",
+    "lazy": false,
+    "settings": {}
+   }
+  },
+  "models": {
+   "i18n": {
+    "type": "sap.ui.model.resource.ResourceModel",
+    "uri": "i18n/i18n.properties"
+   },
+   "@i18n": {
+    "type": "sap.ui.model.resource.ResourceModel",
+    "uri": "i18n/i18n.properties"
+   },
+   "i18n|sap.suite.ui.generic.template.ListReport|C_WorkPermitTP": {
+    "type": "sap.ui.model.resource.ResourceModel",
+    "uri": "i18n/ListReport/C_WorkPermitTP/i18n.properties"
+   },
+   "i18n|sap.suite.ui.generic.template.ObjectPage|PermitDetails": {
+    "type": "sap.ui.model.resource.ResourceModel",
+    "uri": "i18n/ObjectPage/PermitDetails/i18n.properties"
+   },
+   "": {
+    "type": "sap.ui.model.odata.v2.ODataModel",
+    "settings": {
+     "defaultBindingMode": "TwoWay",
+     "defaultCountMode": "Inline",
+     "refreshAfterChange": false,
+     "useBatch": true
+    },
+    "dataSource": "mainService",
+    "preload": true
+   },
+   "uiConfigModel": {
+    "type": "sap.ui.model.json.JSONModel",
+    "preload": true
+   }
+  },
+  "extends": {
+   "extensions": {
+    "sap.ui.controllerExtensions": {
+     "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+      "controllerName": "i2d.eam.workpermit.manages1.ext.controller.ObjectPageExt",
+      "sap.ui.generic.app": {
+       "WorkPermit": {
+        "EntitySet": "WorkPermit",
+        "Header": {
+         "Actions": {
+          "ApplicationLogs": {
+           "id": "ApplicationPermitLogs",
+           "text": "{@i18n>ApplicationLogs}",
+           "press": "onApplicationLogsPress"
+          },
+          "idSetIssueFlagButton": {
+           "id": "idSetIssueFlagButton",
+           "text": "{@i18n>idSetIssueFlagButton}",
+           "press": "onClickIssueWrkPmt"
+          },
+          "idReissueWrkPmtButton": {
+           "id": "idReissueWrkPmtButton",
+           "text": "{@i18n>idReissueWrkPmtButton}",
+           "press": "onClickReissueWrkPmt"
+          }
+         }
+        }
+       }
+      }
+     },
+     "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+      "controllerName": "i2d.eam.workpermit.manages1.ext.controller.ListReportExt",
+      "sap.ui.generic.app": {
+       "WorkPermit": {
+        "EntitySet": "WorkPermit",
+        "Actions": {
+         "ApplicationLogs": {
+          "id": "ApplicationAllLogs",
+          "text": "{@i18n>ApplicationLogs}",
+          "press": "onApplicationLogsPress",
+          "global": true
+         }
+        }
+       }
+      }
+     }
+    },
+    "sap.ui.viewExtensions": {
+     "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+      "ResponsiveTableColumnsExtension|WorkPermit": {
+       "type": "XML",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.ListReportResponsiveTableColumns"
+      },
+      "ResponsiveTableCellsExtension|WorkPermit": {
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.ListReportResponsiveTableCells",
+       "type": "XML"
+      }
+     },
+     "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+      "TableToolBarExtension|WorkPermit|PPE": {
+       "id": "AddPPEEntry",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.AddPPEEntryButton",
+       "type": "XML"
+      },
+      "TableToolBarExtension|WorkPermit|SPR": {
+       "id": "AddSPREntry",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.AddSPREntryButton",
+       "type": "XML"
+      },
+      "TableToolBarExtension|WorkPermit|SC": {
+       "id": "permitButtonAddSafetyCert",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.AddSafetyCertificateButton",
+       "type": "XML"
+      },
+      "TableToolBarExtension|WorkPermit|TechObj": {
+       "id": "AddTechObjButton",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.AddTechObjButton",
+       "type": "XML"
+      },
+      "TableToolBarExtension|WorkPermit|Partner": {
+       "id": "ActionPartnerSection",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.ActionPartnerSection",
+       "type": "XML"
+      },
+      "TableToolBarExtension|WorkPermit|ord": {
+       "id": "AddORDEntry",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.OrdersTableCustomActions",
+       "type": "XML"
+      },
+      "TableToolBarExtension|WorkPermit|opr": {
+       "id": "AddOPREntry",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.AddAssignOperationButton",
+       "type": "XML"
+      },
+      "TableToolBarExtension|WorkPermit|APPR1": {
+       "id": "AddApprovalsEntry",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.AddApprovalsEntryButton",
+       "type": "XML"
+      },
+      "ResponsiveTableColumnsExtension|WorkPermitOrder|ord": {
+       "type": "XML",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.OrdersTableCustomColumn"
+      },
+      "ResponsiveTableCellsExtension|WorkPermitOrder|ord": {
+       "type": "XML",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.OrdersTableCustomCell"
+      },
+      "ResponsiveTableColumnsExtension|WorkPermitApprHistory|APPR2": {
+       "type": "XML",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.ApprovalHistoryLongText"
+      },
+      "ResponsiveTableCellsExtension|WorkPermitApprHistory|APPR2": {
+       "type": "XML",
+       "className": "sap.ui.core.Fragment",
+       "fragmentName": "i2d.eam.workpermit.manages1.ext.view.fragments.ApprovalHistoryLongTextButton"
+      }
+     }
+    }
+   }
+  },
+  "contentDensities": {
+   "compact": true,
+   "cozy": true
+  }
+ },
+ "sap.ui.generic.app": {
+  "_version": "1.3.0",
+  "settings": {
+   "forceGlobalRefresh": false,
+   "objectPageHeaderType": "Dynamic",
+   "showDraftToggle": true
+  },
+  "pages": {
+   "ListReport|WorkPermit": {
+    "entitySet": "WorkPermit",
+    "component": {
+     "name": "sap.suite.ui.generic.template.ListReport",
+     "list": true,
+     "settings": {
+      "condensedTableLayout": true,
+      "smartVariantManagement": false,
+      "dataLoadSettings": {
+       "loadDataOnAppLaunch": "always"
+      }
+     }
+    },
+    "pages": {
+     "ObjectPage|WorkPermit": {
+      "entitySet": "WorkPermit",
+      "component": {
+       "name": "sap.suite.ui.generic.template.ObjectPage",
+       "settings": {
+        "navToListOnSave": false
+       }
+      },
+      "embeddedComponents": {
+       "simple::Attachments": {
+        "id": "simple::Attachments",
+        "componentUsage": "attachmentReuseComponent",
+        "title": "{{xtit.originalFiles}}",
+        "settings": {
+         "mode": "{= ${ui>/editable}?'C':'D'}",
+         "sapObjectType": "WorkPermit",
+         "objectKey": "{parts:[{path:'WorkPermit'}],formatter:'i2d.eam.workpermit.manages1.formatter.Formatter.FormatObjKey'}",
+         "semanticObjectKey": "{parts:[{path:'WorkPermit'}],formatter:'i2d.eam.workpermit.manages1.formatter.Formatter.returnExtAttachmentSemObj'}",
+         "linkedSAPObjectKey": "{parts:[{path:'WorkPermit'}],formatter:'i2d.eam.workpermit.manages1.formatter.Formatter.returnExtAttachmentSemObj'}",
+         "isGuid": false,
+         "flavor": "withDocType",
+         "attributeHandling": {
+          "_VisibleAttributes": {
+           "UPLOADEDBY": true,
+           "UPLOADEDON": true,
+           "FILESIZE": true,
+           "ENABLELINK": true,
+           "ATTACHMENTSTATUS": true,
+           "ATTACHMENTTITLE": true,
+           "SOURCE": false,
+           "DIRDETAILS": true
+          },
+          "_VisibleActions": {
+           "RENAME": true,
+           "DELETE": true,
+           "ADD": true,
+           "ADDURL": true,
+           "DOCTYPE": true,
+           "CHECKIN": false
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "sap.fiori": {
+  "registrationIds": [
+   "F4691"
+  ],
+  "archeType": "transactional"
+ },
+ "sap.platform.hcp": {
+  "uri": ""
+ },
+ "sap.platform.abap": {
+  "uri": "/sap/bc/ui5_ui5/sap/eam_wp_mans1/eam_wp_mans1",
+  "_version": "1.1.0"
+ }
+}

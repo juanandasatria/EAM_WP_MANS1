@@ -1,0 +1,1474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+ <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+ <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+ <edmx:Reference
+  Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+ <edmx:Reference
+  Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+ <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+ <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+ <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/></edmx:Reference>
+ <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/></edmx:Reference>
+ <edmx:Reference Uri="../../../sap/ui_workpermit/$metadata"><edmx:Include Namespace="UI_WORKPERMIT" Alias="SAP"/></edmx:Reference>
+ <edmx:DataServices>
+  <Schema Namespace="ui_workpermit_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+   <Annotations Target="cds_ui_workpermit.C_EAMPersonWorkAgreementVHType/AuthorizationGroup"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.C_EAMPersonWorkAgreementVHType/IsBusinessPurposeCompleted"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.C_EAMPersonWorkAgreementVHType/IsBlocked"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.QuickViewType/MaintenanceOrderThumbnailURL"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.IsImageURL"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.QuickViewType/MaintOrderRespPartnerFunction"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.QuickViewType/MaintenanceOrderLongText"><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.QuickViewType/MaintenanceOrderType">
+    <Annotation Term="Common.Text" Path="MaintenanceOrderTypeName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.QuickViewType/MaintPriority">
+    <Annotation Term="Common.Text" Path="MaintPriorityDesc"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.QuickViewType/MaintOrdPersonResponsible">
+    <Annotation Term="Common.Text" Path="PersonResponsibleName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.QuickViewType">
+    <Annotation Term="UI.QuickViewFacets">
+     <Collection>
+      <Record Type="UI.ReferenceFacet"><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#MaintenanceOrderQuickView"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="MaintenanceOrderQuickView">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenanceOrderLongText"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenanceOrderType"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintPriority"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="LatestAcceptableCompletionDate"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintOrdBasicStartDate"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintOrdBasicEndDate"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintOrdPersonResponsible"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ConcatenatedActiveSystStsName"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ConcatenatedActiveUserStsName"/></Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Maintenance Order"/><PropertyValue Property="TypeNamePlural" String="Maintenance Orders"/><PropertyValue Property="ImageUrl" Path="MaintenanceOrderThumbnailURL"/></Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitPartnerVHType/MaintenancePlanningPlant"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitPartnerVHType/PartnerDeterminationProcedure"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.C_PMWorkCenterVHType/WorkCenterInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.C_PMWorkCenterVHType/WorkCenterTypeCode"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.C_PMWorkReqReporterVHType/UserID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.C_PMWorkReqReporterVHType/FullName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPermitApprvlEntryDate"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPermitAprvdFromDate"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPermitAprvdToDate"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPermitAprvdFromTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPermitAprvdToTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPmtApprvlDeactivationDate"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPmtApprvlDeactivationTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPermitApprvlSgmtIsInactive"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPermitApprvlSgmt"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/NumberOfWrkPermitApprovals"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/WrkPermitApprvlEntryTime"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/OriglCreatedByUserDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/UserDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprHistoryType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Approval History"/><PropertyValue Property="TypeNamePlural" String="Approvals History"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Approvals"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitApproval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitApprovalDescription"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WrkPermitApprvlEnteredByUsr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ApprovalDateTime"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Approver Information"/><PropertyValue Property="Value" Path="WorkPermitApprovalComment"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="PlainLongText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WrkPermitApprvlDactvtdByUsr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitRevokeDateTime"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitRevokeLongText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="ApprovalDateTime"/><PropertyValue Property="Descending" Bool="true"/></Record>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="NumberOfWrkPermitApprovals"/><PropertyValue Property="Descending" Bool="true"/></Record>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="WrkPermitApprvlSgmt"/><PropertyValue Property="Descending" Bool="true"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>WorkPermitInternalID</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>WorkPermitApprovalDescription</PropertyPath>
+        <PropertyPath>WrkPermitApprvlSgmt</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WorkPermitApprovalStatus"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/NumberOfWrkPermitApprovals"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WorkPermitType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/CreationDate"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/CreatedByUser"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/LastChangedDate"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/LastChangedByUser"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WrkPmtApprovalIsMandatory"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WrkPmtApprovalHierarchyLevel"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/TextObjectKey"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/PlainLongText"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WrkPmtSftyRqmtCriticalityCode"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/MaintenancePlanningPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/Approve_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/Revoke_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/PlainLongText_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WorkPermitApprovalComment_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/WorkPermitApprovalStatus_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprovalType">
+    <Annotation Term="UI.FieldGroup" Qualifier="AppAction">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Revoke"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/Revoke"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/><PropertyValue Property="Inline" Bool="true"/></Record>
+        <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Approve"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/Approve"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/><PropertyValue Property="Inline" Bool="true"/></Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Approval"/><PropertyValue Property="TypeNamePlural" String="Approvals"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Approvals"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitApproval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitApprovalDescription"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WrkPmtApprvlMandText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitApprovalComment"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="PlainLongText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Criticality" Path="WrkPmtSftyRqmtCriticalityCode"/><PropertyValue Property="Value" Path="WorkPermitApprovalStatusText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataFieldForAnnotation"><PropertyValue Property="Label" String="Action"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#AppAction"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="WrkPmtApprovalHierarchyLevel"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>WrkPmtApprovalHierarchyLevel</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>WorkPermitApprovalDescription</PropertyPath>
+        <PropertyPath>WrkPmtApprovalHierarchyLevel</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/NumberOfWorkPermitIssued"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/MaintenancePlanningPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/WorkPermitType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/WorkPermitIssuedByName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/WorkPermitReturnedByName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/PersonFullName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitIssueHistType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Work Permit Issue History"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Issue History"/></Record>
+      </PropertyValue>
+     </Record>
+     <Annotation Term="Core.Messages">
+      <Collection>
+       <Record><PropertyValue Property="message" String="UI.HEADERINFO: TypeNamePlural is mandatory"/><PropertyValue Property="severity" String="error"/></Record>
+      </Collection>
+     </Annotation>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitIssuedBy"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitIssuedTo"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="UserCommentsText"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitIssueDateTime"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitReturnedTo"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitReturnedDateTime"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>WorkPermit</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>WorkPermit</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/Language"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/WorkPermitLongText"><Annotation Term="UI.Hidden"/><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/WorkPermitOperationRemarkText"><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitLongTextType/WrkPmtMaintenanceRemarkText"><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/WorkPermitGroupCategory"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/WrkPmtSafetyRequirementGroup"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/WorkPermitSafetyRequirement"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/MaintenancePlanningPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/WorkPermitType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/WrkPmtSftyRqmtIsSelected_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitNatureOfWorkType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Nature of Work"/><PropertyValue Property="TypeNamePlural" String="Nature of Work"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Nature of Work"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Applicable"/><PropertyValue Property="Value" Path="WrkPmtSftyRqmtIsSelected"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Description"/><PropertyValue Property="Value" Path="WrkPmtSafetyRequirementText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Item Code"/><PropertyValue Property="Value" Path="WorkPermitSafetyRequirement"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Category"/><PropertyValue Property="Value" Path="WrkPmtSftyRequirementGroupText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Grp Code"/><PropertyValue Property="Value" Path="WrkPmtSafetyRequirementGroup"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="WrkPmtSftyRequirementGroupText"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>WrkPmtSftyRequirementGroupText</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>WrkPmtSafetyRequirementText</PropertyPath>
+        <PropertyPath>WrkPmtSftyRequirementGroupText</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/OperationOrderRoutingNumber"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/OperationDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/MaintenanceOrder"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/WorkCenterText"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/PlantName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/WorkCenter">
+    <Annotation Term="Common.Text" Path="WorkCenterText"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType/Plant">
+    <Annotation Term="Common.Text" Path="PlantName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtOrderOperationType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Assigned Operations"/><PropertyValue Property="TypeNamePlural" String="Assigned Operations"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Assigned Operations"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Operation Number"/><PropertyValue Property="Value" Path="MaintenanceOrderOperation"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Work Center"/><PropertyValue Property="Value" Path="WorkCenter"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Plant Name"/><PropertyValue Property="Value" Path="Plant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="System Status"/><PropertyValue Property="Value" Path="ConcatenatedActiveSystStsName"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="MaintOrderOperationCounter"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>MaintOrderOperationCounter</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>MaintOrderOperationCounter</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.OrderOperationType/MaintenanceOrderOperation"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OrderOperationType/Plant">
+    <Annotation Term="Common.Text" Path="PlantName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.OrderOperationType/WorkCenter">
+    <Annotation Term="Common.Text" Path="WorkCenterText"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.OrderOperationType">
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Operation Number"/><PropertyValue Property="Value" Path="MaintenanceOrderOperation"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Work Center"/><PropertyValue Property="Value" Path="WorkCenter"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Plant Name"/><PropertyValue Property="Value" Path="Plant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="System Status"/><PropertyValue Property="Value" Path="ConcatenatedActiveSystStsName"/></Record>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MaintenanceOrderInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MaintenanceOrderDesc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MaintenancePlanningPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/WorkPermitOrderObjectType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/WorkPermitObjectType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MaintenanceOrderType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MaintenanceOrderOperation"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MaintOrderRoutingNumber"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/WorkCenterText"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/EAMProcessPhaseCodeDesc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/EAMProcessSubPhaseCodeDesc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MainWorkCenter">
+    <Annotation Term="Common.Text" Path="WorkCenterText"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MaintOrdProcessPhaseCode">
+    <Annotation Term="Common.Text" Path="EAMProcessPhaseCodeDesc"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType/MaintOrdProcessSubPhaseCode">
+    <Annotation Term="Common.Text" Path="EAMProcessSubPhaseCodeDesc"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitOrderType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Orders"/><PropertyValue Property="TypeNamePlural" String="Orders"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="OrderNumber"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Order"/><PropertyValue Property="Value" Path="MaintenanceOrder"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Main Work Center"/><PropertyValue Property="Value" Path="MainWorkCenter"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Main Work Center Plant"/><PropertyValue Property="Value" Path="MainWorkCenterPlant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Phase"/><PropertyValue Property="Value" Path="MaintOrdProcessPhaseCode"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Subphase"/><PropertyValue Property="Value" Path="MaintOrdProcessSubPhaseCode"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Operations"/><PropertyValue Property="Value" Path="MaintenanceOrderOperation"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="MaintenanceOrder"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>MaintenanceOrder</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>MaintenanceOrder</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/MaintenancePlanningPlant"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/PlantName"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/MaintenanceOrderCategory"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/MainWorkCenter"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/WorkCenterTypeCode"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/WorkCenterInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/MaintenanceOrderInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/MaintenancePlannerGroup"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/CompanyCode"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType/MaintenanceProcessingPhase"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.OpenOrderType">
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Order"/><PropertyValue Property="Value" Path="MaintenanceOrder"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Maintenance Order Description"/><PropertyValue Property="Value" Path="MaintenanceOrderDesc"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Plant"/><PropertyValue Property="Value" Path="MaintenancePlanningPlant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Plant Name"/><PropertyValue Property="Value" Path="PlantName"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Order Type"/><PropertyValue Property="Value" Path="MaintenanceOrderType"/></Record>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/MaintObjectInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/MaintenancePartnerObjectNumber"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/MaintObjectCategory"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/WorkPermitType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/Country"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/CreatedByUser"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/CreationDate"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/CreationTime"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/LastChangedByUser"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/LastChangedDate"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/LastChangeTime"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitPartnerType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Partner"/><PropertyValue Property="TypeNamePlural" String="Partners"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Partners"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Description"/><PropertyValue Property="Value" Path="PartnerFunctionName"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="PartnerFunction"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Partner Number"/><PropertyValue Property="Value" Path="MaintenancePartner"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Partner Name"/><PropertyValue Property="Value" Path="CustomerFullName"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>MaintenancePartner</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitReferenceObjectType/WorkPermitReferenceObjectType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/CreatedByUserName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/WorkPermitGroupCategory"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/WrkPmtSafetyRequirementGroup"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/WorkPermitSafetyRequirement"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/WrkPmtSftyRqmtCriticalityCode"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/MaintenancePlanningPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/WorkPermitType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/UserCommentsText_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/WrkPmtSftyRqmtIsImplemented_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType/UserCommentsText"><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitSafetyPracautionType">
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Description"/><PropertyValue Property="Value" Path="WrkPmtSafetyRequirementText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Category"/><PropertyValue Property="Value" Path="WrkPmtSftyRequirementGroupText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Comments"/><PropertyValue Property="Value" Path="UserCommentsText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Set Implementation Status"/><PropertyValue Property="Value" Path="WrkPmtSftyRqmtIsImplemented"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Implementation Status"/><PropertyValue Property="Criticality" Path="WrkPmtSftyRqmtCriticalityCode"/><PropertyValue Property="Value" Path="CriticalityText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Implemented On"/><PropertyValue Property="Value" Path="CreationDateTime"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Implemented By"/><PropertyValue Property="Value" Path="CreatedByUser"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Safety Certificate Type"/><PropertyValue Property="Value" Path="SafetyCertificateType"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/TechnicalObject"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/SftyCertItemCatType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/PlantName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/TechnicalObjectDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/MaintObjectInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitTechnicalObjectType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Technical Objects"/><PropertyValue Property="TypeNamePlural" String="Technical Objects"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Technical Objects"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Technical Object"/><PropertyValue Property="Value" Path="TechnicalObjectLabel"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Technical Object Type Description"/><PropertyValue Property="Value" Path="TechObjIsEquipOrFuncnlLocDesc"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Maintenance Plant"/><PropertyValue Property="Value" Path="MaintenancePlant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="System Status"/><PropertyValue Property="Value" Path="TechObjCnctntdActvSystSts"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="TechnicalObject"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>TechnicalObject</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>TechnicalObject</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitInternalID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPmtOrdOpAssgmtIsAllowed"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPmtIssueHistoryIsAllowed"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPmtSftyCertAssgmtCtrlCode"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitExternalNumber"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ValidationScenarioID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/IsApproved"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPermitDesc"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPermitValidFrmDate"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPermitValidFrmTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPermitValidToDate"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPermitValidToTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkCenterText"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ObjectTypeCode"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/OperationWorkCenterInternalID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/MainWorkCenterPlantName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/CreatedByUserName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/LastChangedByUserName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPmtMgmtObjSubType"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/PlantTimeZone"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ValidFromDateTime"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ValidToDateTime"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/IsExpired"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/FunctionalLocation"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/FunctionalLocationName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPermitHasMaintRemark"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPermitHasOpRemark"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/TechnicalObject"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/TechnicalObjectDescription"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/TechObjIsEquipOrFuncnlLocDesc"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/MaintenancePlantName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/IsAttachmentsEnabled"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/PlantSectionDesc"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/LocationName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/AssetRoom"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/MaintenancePlanningPlantName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/MaintenancePlannerGroupName"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitHasLongText"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitLongText"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitOperationRemarkText"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPmtMaintenanceRemarkText"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitCancellationText"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitTypeDescription"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/UserCommentsText"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPmtChgStsActnEnbldVal"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitReferenceObjectType"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_TechnicalObjectVH"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/PersonFullName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPmtCnctntdActvSystStsTxt"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ProductImageURL"><Annotation Term="UI.Hidden"/><Annotation Term="UI.IsImageURL"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitProcessingStatusText"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ActivateChanges_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/Cancel_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/CheckAuthorization_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/Deactivate_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/Edit_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ExtendWorkPermit_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/IssueWorkPermit_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/PrintWorkPermit_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/RemoveDeletionFlag_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/RevokeRelease_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/SetDeletionFlag_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/SetProcessingStatusToClosed_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/SubmitForApproval_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/UnassignJobs_ac"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/FunctionalLocation_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/MaintenancePlannerGroup_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/MaintOrdPersonResponsible_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/TechnicalObject_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/TechnicalObjectLabel_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/TechObjAuthorizationGroup_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/TechObjIsEquipOrFuncnlLoc_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ValidFromDateTime_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/ValidToDateTime_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkCenter_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkCenterPlant_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitLongText_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitOperationRemarkText_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitReference_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitReferenceWorkPermit_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPermitDesc_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WrkPmtMaintenanceRemarkText_fc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_PermitNatureOfWork_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_PermitProtEquip_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_PermitSftyPrecaution_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_TechnicalObject_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WorkPermitApproval_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WorkPermitIssHist_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WorkPermitLongTxt_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WorkPermitOrder_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WorkPermitOrderOperation_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WorkPermitPartner_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WrkPmtApprvlSgmt_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WrkPmtSafetyCertificate_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/to_WrkPmtSftyCertApproval_oc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermit">
+    <Annotation Term="Common.Text" Path="WrkPermitDesc"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/MaintenancePlanningPlant">
+    <Annotation Term="Common.Text" Path="MaintenancePlanningPlantName"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/TechObjIsEquipOrFuncnlLoc">
+    <Annotation Term="Common.Text" Path="TechObjIsEquipOrFuncnlLocDesc"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType/WorkPermitProcessingStatus">
+    <Annotation Term="Common.Text" Path="WorkPermitProcessingStatusText"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitType">
+    <Annotation Term="UI.DataPoint" Qualifier="Header">
+     <Record><PropertyValue Property="Value" Path="MaintOrdPersonResponsible"/><PropertyValue Property="Title" String="Issued To"/></Record>
+    </Annotation>
+    <Annotation Term="UI.DataPoint" Qualifier="Header">
+     <Record><PropertyValue Property="Value" Path="MaintenancePlanningPlant"/><PropertyValue Property="Title" String="Planning Plant"/></Record>
+    </Annotation>
+    <Annotation Term="UI.DataPoint" Qualifier="Header">
+     <Record><PropertyValue Property="Value" Path="WorkPermitProcessingStatus"/><PropertyValue Property="Title" String="Processing Status"/></Record>
+    </Annotation>
+    <Annotation Term="UI.HeaderFacets">
+     <Collection>
+      <Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="PlanningPlant"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Header"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.Facets">
+     <Collection>
+      <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="General Information"/><PropertyValue Property="ID" String="GENDATA"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="General Information"/><PropertyValue Property="ID" String="CDATA"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="General Data"/><PropertyValue Property="ID" String="BasicData"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BasicData"/></Record>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Reference Object"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ReferenceObject"/></Record>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Responsibility"/><PropertyValue Property="ID" String="GENERAL_INFORMATION7"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Responsibality"/></Record>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Location Data of Reference Object"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#LocationData"/></Record>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Administrative Information"/><PropertyValue Property="ID" String="AdminData"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#AdminData"/></Record>
+           </Collection>
+          </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Nature Of Work"/><PropertyValue Property="ID" String="NOW"/>
+          <PropertyValue Property="Facets"><Collection/></PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+        </Collection>
+       </PropertyValue>
+      </Record>
+      <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Object List"/><PropertyValue Property="ID" String="TechObj"/><PropertyValue Property="Target" AnnotationPath="to_TechnicalObject/@UI.LineItem#Object"/></Record>
+      <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Nature Of Work"/><PropertyValue Property="ID" String="NOWDATA"/>
+       <PropertyValue Property="Facets"><Collection/></PropertyValue>
+      </Record>
+      <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Safety Requirements"/><PropertyValue Property="ID" String="CDATA1"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Safety Precautions"/><PropertyValue Property="ID" String="SPRITM"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="SPR"/><PropertyValue Property="Target" AnnotationPath="to_PermitSftyPrecaution/@UI.LineItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+           </Collection>
+          </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Personal Protective Equipment"/><PropertyValue Property="ID" String="PPEITM"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="PPE"/><PropertyValue Property="Target" AnnotationPath="to_PermitProtEquip/@UI.LineItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+           </Collection>
+          </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+        </Collection>
+       </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Safety Certificates"/><PropertyValue Property="ID" String="CDATA2"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Safety Certificate"/><PropertyValue Property="ID" String="SFTYCERT"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="SC"/><PropertyValue Property="Target" AnnotationPath="to_WrkPmtSafetyCertificate/@UI.LineItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+           </Collection>
+          </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Approvals in Work Permit Process"/><PropertyValue Property="ID" String="PROAPPR"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="PA"/><PropertyValue Property="Target" AnnotationPath="@UI.LineItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+           </Collection>
+          </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+        </Collection>
+       </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Assigned Orders"/><PropertyValue Property="ID" String="CDATA3"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Orders"/><PropertyValue Property="ID" String="ORDERS"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Orders"/><PropertyValue Property="ID" String="ord"/><PropertyValue Property="Target" AnnotationPath="to_WorkPermitOrder/@UI.LineItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+           </Collection>
+          </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Assigned Operations"/><PropertyValue Property="ID" String="ASSIGNEDOPERATIONS"/>
+          <PropertyValue Property="Facets"><Collection/></PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+        </Collection>
+       </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Partners"/><PropertyValue Property="ID" String="Partner"/><PropertyValue Property="Target" AnnotationPath="to_WorkPermitPartner/@UI.LineItem#Object"/></Record>
+      <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Approvals"/><PropertyValue Property="ID" String="APRV"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Approvals"/><PropertyValue Property="ID" String="APPROVAL"/>
+          <PropertyValue Property="Facets"><Collection/></PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+         <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Approvals"/><PropertyValue Property="ID" String="APPR1"/><PropertyValue Property="Target" AnnotationPath="to_WorkPermitApproval/@UI.LineItem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Approvals History"/><PropertyValue Property="ID" String="APPRHIS"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Approvals History"/><PropertyValue Property="ID" String="APPR2"/><PropertyValue Property="Target" AnnotationPath="to_WrkPmtApprvlSgmt/@UI.LineItem#AprvSeg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+           </Collection>
+          </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+        </Collection>
+       </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="History"/><PropertyValue Property="ID" String="Hist"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Issue History"/><PropertyValue Property="ID" String="IssHist"/>
+          <PropertyValue Property="Facets"><Collection/></PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+        </Collection>
+       </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Comments"/><PropertyValue Property="ID" String="AddtnlData"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet"><PropertyValue Property="Label" String="Comments"/><PropertyValue Property="ID" String="Remarks"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet"><PropertyValue Property="ID" String="Remark"/><PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Wrkpmtremark"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+           </Collection>
+          </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+        </Collection>
+       </PropertyValue><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="ID" String="Status"/><PropertyValue Property="Target" AnnotationPath="to_WorkPermitStatus/@UI.LineItem#Status"/></Record>
+      <Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Assigned Orders &amp; Operations"/><PropertyValue Property="ID" String="OrOp"/><PropertyValue Property="Target" AnnotationPath="to_WorkPermitOrder/@UI.LineItem#Object"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="AdminData">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="CreationDateTime"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="CreatedByUser"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="LastChangeDateTime"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="LastChangedByUser"/></Record>
+       </Collection>
+      </PropertyValue><PropertyValue Property="Label" String="Administrative Information"/></Record>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="BasicData">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WrkPermitDesc"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ValidFromDateTime"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ValidToDateTime"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitLongText"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitReferenceWorkPermit"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitReference"/></Record>
+       </Collection>
+      </PropertyValue><PropertyValue Property="Label" String="General Data"/></Record>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="Category Data">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Label" String="Work Permit Number"/><PropertyValue Property="Value" Path="WorkPermit"/></Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="Header">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Label" String="Planning Plant"/><PropertyValue Property="Value" Path="MaintenancePlanningPlant"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Label" String="Work Permit Type"/><PropertyValue Property="Value" Path="WorkPermitType"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Label" String="Processing Status"/><PropertyValue Property="Value" Path="WorkPermitProcessingStatus"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Label" String="Issued To"/><PropertyValue Property="Value" Path="MaintOrdPersonResponsible"/></Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="LocationData">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="AssetRoom"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="AssetLocation"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="PlantSection"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenancePlant"/></Record>
+       </Collection>
+      </PropertyValue><PropertyValue Property="Label" String="Location Data"/></Record>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="ReferenceObject">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="TechnicalObjectLabel"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="TechObjIsEquipOrFuncnlLoc"/></Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="Responsibality">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkCenter"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkCenterPlant"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="TechObjAuthorizationGroup"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenancePlannerGroup"/></Record>
+       </Collection>
+      </PropertyValue><PropertyValue Property="Label" String="Responsibility"/></Record>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="Wrkpmtremark">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitOperationRemarkText"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WrkPmtMaintenanceRemarkText"/></Record>
+        <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitCancellationText"/></Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Work Permits"/><PropertyValue Property="TypeNamePlural" String="Work Permits"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WrkPermitDesc"/></Record>
+      </PropertyValue>
+      <PropertyValue Property="Description">
+       <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermit"/></Record>
+      </PropertyValue><PropertyValue Property="ImageUrl" Path="ProductImageURL"/></Record>
+    </Annotation>
+    <Annotation Term="UI.Identification">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Application Number"/><PropertyValue Property="Value" Path="WorkPermitType"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitProcessingStatus"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenancePlanningPlant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="AssetRoom"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="AssetLocation"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="PlantSection"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenancePlant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ValidFromDateTime"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ValidToDateTime"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WrkPermitDesc"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenancePlannerGroup"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="TechnicalObjectLabel"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="TechObjAuthorizationGroup"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkCenterPlant"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Submit for Approval"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/SubmitForApproval"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Revoke Work Permit"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/RevokeRelease"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Cancel Work Permit"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Set Deletion Flag"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/SetDeletionFlag"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Deactivate Work Permit"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/Deactivate"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Activate Work Permit"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/ActivateChanges"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Close Work Permit"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/SetProcessingStatusToClosed"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Reset Deletion flag"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/RemoveDeletionFlag"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Extend Work Permit"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/ExtendWorkPermit"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataFieldForAction"><PropertyValue Property="Label" String="Create Permit"/><PropertyValue Property="Action" String="cds_ui_workpermit.cds_ui_workpermit_Entities/CreateFromPopup"/><PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitType"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="AssetLocation"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenancePlant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="TechnicalObjectLabel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkCenter"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="AssetRoom"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkPermitProcessingStatus"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="PlantSection"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenancePlanningPlant"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="System Status"/><PropertyValue Property="Value" Path="WrkPmtCnctntdActvSystStsTxt"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ValidFromDateTime"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ValidToDateTime"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintenancePlannerGroup"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="TechObjIsEquipOrFuncnlLoc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="MaintOrdPersonResponsible"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="TechObjAuthorizationGroup"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WorkCenterPlant"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.LineItem" Qualifier="StatusCode">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="to_WorkPermitStatus"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="CreationDateTime"/><PropertyValue Property="Descending" Bool="true"/></Record>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="LastChangeDateTime"/><PropertyValue Property="Descending" Bool="true"/></Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.SelectionFields">
+     <Collection>
+      <PropertyPath>WorkPermit</PropertyPath>
+      <PropertyPath>WorkPermitType</PropertyPath>
+      <PropertyPath>ValidFromDateTime</PropertyPath>
+      <PropertyPath>MaintenancePlanningPlant</PropertyPath>
+      <PropertyPath>ValidToDateTime</PropertyPath>
+      <PropertyPath>WorkPermitProcessingStatus</PropertyPath>
+      <PropertyPath>WorkCenter</PropertyPath>
+      <PropertyPath>TechnicalObjectLabel</PropertyPath>
+      <PropertyPath>TechObjIsEquipOrFuncnlLoc</PropertyPath>
+      <PropertyPath>ActiveMaintenanceOrder</PropertyPath>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.C_WorkPermitTypeValueHelpType">
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Work Permit Type"/><PropertyValue Property="Value" Path="WorkPermitType"/></Record>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitPartnerFunctionVHType/PartnerDeterminationProcedure"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitPartnerFunctionVHType/MaintenancePlanningPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/WorkPermitGroupCategory"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/WrkPmtSafetyRequirementGroup"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/WorkPermitSafetyRequirement"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/MaintenancePlanningPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/WorkPermitType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitProtEqipType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Protective Equipment"/><PropertyValue Property="TypeNamePlural" String="Protective Equipments"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Protective Equipment"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Description"/><PropertyValue Property="Value" Path="WrkPmtSafetyRequirementText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Item Code"/><PropertyValue Property="Value" Path="WorkPermitSafetyRequirement"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Grp Code"/><PropertyValue Property="Value" Path="WrkPmtSafetyRequirementGroup"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Category"/><PropertyValue Property="Value" Path="WrkPmtSftyRequirementGroupText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="WrkPmtSftyRequirementGroupText"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>WrkPmtSftyRequirementGroupText</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>WrkPmtSftyRequirementGroupText</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/SafetyCertificateInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/SftyCertDesc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/SftyCertificateTypeDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/MaintenancePlanningPlantName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/TechnicalObjectDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/WorkPermitObjectType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/SftyCertWrkPmtObjectType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/SftyCertProcessingContext"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSafetyCertificateType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Safety Certificates"/><PropertyValue Property="TypeNamePlural" String="Safety Certificates"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Safety Certificates"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Safety Certificate"/><PropertyValue Property="Value" Path="SafetyCertificate"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Safety Certificate Type"/><PropertyValue Property="Value" Path="SafetyCertificateType"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Plant"/><PropertyValue Property="Value" Path="MaintenancePlanningPlant"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Technical Object"/><PropertyValue Property="Value" Path="TechnicalObjectLabel"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid From"/><PropertyValue Property="Value" Path="ValidFromDateTime"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Valid To"/><PropertyValue Property="Value" Path="ValidToDateTime"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Processing Status"/><PropertyValue Property="Value" Path="SftyCertProcessingStatusText"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="SafetyCertificate"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>SafetyCertificate</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>SafetyCertificate</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/HasDraftEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/DraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/ParentDraftUUID"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/DraftEntityCreationDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/DraftEntityLastChangeDateTime"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/HasActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/IsActiveEntity"><Annotation Term="UI.HiddenFilter"/><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/SafetyCertificateInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/NumberOfSftyCertApprovals"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/SftyCertDesc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/SftyCertApprovalDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/SftyCertificateApprovalStatus"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/SftyCertificateTypeDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/Delete_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType/Update_mc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertApprovalType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Approvals in Work Permit Process"/><PropertyValue Property="TypeNamePlural" String="Approvals in Work Permit Process"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Approvals in Work Permit Process"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Safety Certificate"/><PropertyValue Property="Value" Path="SafetyCertificate"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Safety Certificate Type"/><PropertyValue Property="Value" Path="SafetyCertificateType"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Approval"/><PropertyValue Property="Value" Path="SafetyCertificateApprovalCode"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Approval Status"/><PropertyValue Property="Criticality" Path="SftyCertSftyRqmtCritltyCode"/><PropertyValue Property="Value" Path="DomainText"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="SafetyCertificateInternalID"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>SafetyCertificateInternalID</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>SafetyCertificateInternalID</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertValueHelpType/TechnicalObjectLabel"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertValueHelpType/Equipment"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertValueHelpType/FunctionalLocation"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertValueHelpType/ValidFromDateTime"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertValueHelpType/ValidToDateTime"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertValueHelpType/SafetyCertificate">
+    <Annotation Term="Common.Text" Path="SftyCertDesc"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WrkPmtSftyCertValueHelpType">
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="SafetyCertificate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.SelectionFields">
+     <Collection>
+      <PropertyPath>SafetyCertificate</PropertyPath>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/MaintenancePlanningPlant"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/TechObjIsEquipOrFuncnlLoc"><Annotation Term="UI.Hidden"/>
+    <Annotation Term="Common.Text" Path="TechObjIsEquipOrFuncnlLocDesc"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/TechnicalObject"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/FunctionalLocationLabelName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/WorkCenterText"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/MainWorkCenterInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/MainWorkCenterPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/Equipment"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/FunctionalLocation"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/AssetRoom"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/AssetLocation"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/LocationName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/PlantSection"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/PlantName"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/PlantSectionDesc"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.TechnicalObjectType/MaintObjectInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_CostCenterStdVHType">
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="CostCenter"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="ControllingArea"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/DraftUUID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/DraftEntityType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/DraftAccessType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/ProcessingStartDateTime"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/InProcessByUser"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/DraftIsKeptByUser"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/EnqueueStartDateTime"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/DraftIsCreatedByMe"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/DraftIsLastChangedByMe"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/DraftIsProcessedByMe"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/CreatedByUserDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/LastChangedByUserDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_DraftAdministrativeDataType/InProcessByUserDescription"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitProfileDetailsType/MaintenancePlanningPlant"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitProfileDetailsType/PlantName"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitProfileDetailsType/WrkPmtOrdOpAssgmtIsAllowed"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitProfileDetailsType/MaxNumberOfOrdersToPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitProfileDetailsType/MaxNumberOfPermitsToOrder"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitProfileDetailsType/PartnerDeterminationProcedure"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitProfileDetailsType/WrkPmtIssueHistoryIsAllowed"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitProfileDetailsType/WrkPmtSftyCertAssgmtCtrlCode"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_PersWrkAgrmtSrchHelpType/PersonWorkAgrmtAuthznGrpg"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_PersWrkAgrmtSrchHelpType/AuthorizationGroup"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_PersWrkAgrmtSrchHelpType/IsBusinessPurposeCompleted"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_TechObjIsEquipOrFuncnlLocType/TechObjIsEquipOrFuncnlLoc">
+    <Annotation Term="Common.Text" Path="TechObjIsEquipOrFuncnlLoc_Text"><Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/></Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitDetType/WrkPmtOrdOpAssgmtIsAllowed"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitDetType/WrkPmtIssueHistoryIsAllowed"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitDetType/WrkPmtSftyCertAssgmtCtrlCode"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitApprvHistoryType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="Approval History"/><PropertyValue Property="TypeNamePlural" String="Approvals History"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="Approvals"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Value" Path="WrkPermitApprvlEnteredByUsr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="WrkPermitApprvlSgmt"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="GroupBy">
+       <Collection>
+        <PropertyPath>WorkPermitInternalID</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>WorkPermitApprovalDescription</PropertyPath>
+        <PropertyPath>WrkPermitApprvlSgmt</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitStatusType/WorkPermit"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitStatusType/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitStatusType/StatusCode"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitStatusType/StatusObjectStatusChangeNumber"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitStatusType/LastChangeDate"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitStatusType/LastChangeTime"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitStatusType/StatusIsInactive"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.WorkPermitStatusType">
+    <Annotation Term="UI.HeaderInfo">
+     <Record><PropertyValue Property="TypeName" String="SystemStatus"/><PropertyValue Property="TypeNamePlural" String="System Status"/>
+      <PropertyValue Property="Title">
+       <Record Type="UI.DataField"><PropertyValue Property="Label" String="System Status"/></Record>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="StatusCode"/><PropertyValue Property="Value" Path="StatusCode"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Inactive"/><PropertyValue Property="Value" Path="StatusIsInactive"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="Value" Path="StatusShortName"/></Record>
+      <Record Type="UI.DataField"><PropertyValue Property="Label" String="Description"/><PropertyValue Property="Value" Path="SystemStatusName"/></Record>
+     </Collection>
+    </Annotation>
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="LastChangeDateTime"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="RequestAtLeast">
+       <Collection>
+        <PropertyPath>StatusCode</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Visualizations">
+       <Collection>
+        <AnnotationPath>@UI.LineItem</AnnotationPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitTypeType/MaintenancePlanningPlant"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitTypeType/WorkPermitType"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitTypeType/WorkPermitTypeDescription"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitTypeType/InternalNumberRangeInterval"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.PermitTypeType/ExternalNumberRangeInterval"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_WorkPermitVHType/WorkPermitTypeDescription"><Annotation Term="UI.HiddenFilter"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_WorkPermitVHType/MaintenancePlannerGroup"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_WorkPermitVHType/TechObjAuthorizationGroup"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.I_WrkPmtProcessingStatusTextType">
+    <Annotation Term="UI.PresentationVariant">
+     <Record>
+      <PropertyValue Property="SortOrder">
+       <Collection>
+        <Record Type="Common.SortOrderType"><PropertyValue Property="Property" PropertyPath="WorkPermitProcessingStatus"/><PropertyValue Property="Descending" Bool="false"/></Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="cds_ui_workpermit.RefWorkPermitTemplateVHType/WrkPmtMgmtObjSubType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.RefWorkPermitTemplateVHType/Equipment"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.RefWorkPermitTemplateVHType/FunctionalLocation"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.RefWorkPermitTemplateVHType/WorkPermitProcessingStatus"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Approve/PlainLongText"><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/SystemMessageVariable4"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/SystemMessageVariable3"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/SystemMessageVariable2"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/SystemMessageVariable1"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/SystemMessageText"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/SystemMessageIdentification"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/SystemMessageNumber"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/SystemMessageType"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/WorkPermitCancelIsAllowed"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/MaintenancePlanningPlant"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/WorkPermitInternalID"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/TextObjectCategory"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/WorkPermitProcessingStatus"><Annotation Term="UI.Hidden"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Cancel/WorkPermitCancellationText"><Annotation Term="UI.MultiLineText"/></Annotations>
+   <Annotations Target="cds_ui_workpermit.cds_ui_workpermit_Entities/Revoke/SftyCertRevokeLongText"><Annotation Term="UI.MultiLineText"/></Annotations><Annotations Target="_Entities"/></Schema>
+ </edmx:DataServices>
+</edmx:Edmx>

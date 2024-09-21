@@ -1,0 +1,45 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:table="sap.ui.table" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+	<ResponsivePopover id="SelectedOperationPopover" contentWidth="50%" class="sapUiContentPadding" placement="HorizontalPreferredRight">
+		<endButton>
+			<Button text="{i18n>AssignOperationDialogActionText}" press="handleSelectedOperationsListCloseButton"/>
+		</endButton>
+		<table:Table id="SelectedOperationTable" selectionMode="{= ${ui>/editable}?'MultiToggle':'None'}" visibleRowCountMode="Auto"
+			ariaLabelledBy="title">
+			<table:extension>
+				<OverflowToolbar style="Clear">
+					<Title text="{i18n>AssignedOperationsText}"/>
+					<ToolbarSpacer/>
+					<Button type="Emphasized" id="unAssignOperationAction" text="{i18n>UnassignOperationActionText}" enabled="false"
+						tooltip="{i18n>UnassignOperationActionText}" press="onPressUnassignOperation" 
+						visible="{= ${ui>/editable} === true &amp;&amp; ${WorkPermitProcessingStatus} === 'PS00' ? true : false}"/>
+				</OverflowToolbar>
+			</table:extension>
+			<table:columns>
+				<table:Column width="10rem">
+					<Label text="{i18n>AssignedOperationCoumnText}"/>
+					<table:template>
+						<Text text="{MaintenanceOrderOperation}" wrapping="false"/>
+					</table:template>
+				</table:Column>
+				<table:Column width="15rem">
+					<Label text="{i18n>OperationDcriptionFilterItemText}"/>
+					<table:template>
+						<Text text="{OperationDescription}" wrapping="false"/>
+					</table:template>
+				</table:Column>
+				<table:Column width="10rem">
+					<Label text="{i18n>WorkCenterFilterItemText}"/>
+					<table:template>
+						<Text text="{WorkCenter}" wrapping="false"/>
+					</table:template>
+				</table:Column>
+			</table:columns>
+		</table:Table>
+	</ResponsivePopover>
+</core:FragmentDefinition>

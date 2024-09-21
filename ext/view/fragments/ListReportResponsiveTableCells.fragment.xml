@@ -1,0 +1,11 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" id="idFragmentListReportCellFrag" xmlns:nav="sap.ui.comp.navpopover">
+ <VBox id="idListReportExtOrderVBox">
+  <Link id="idListReportExtOrderCell" press=".onOrderColumnLinkPress" visible="{= %{NumberOfOrders} > 0}"
+     text="{ path : 'NumberOfOrders', formatter : '.formatOrderColumnExt' }" />
+ </VBox>
+</core:FragmentDefinition>

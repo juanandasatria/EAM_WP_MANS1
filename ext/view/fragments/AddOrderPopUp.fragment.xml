@@ -1,0 +1,40 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.ui.comp.valuehelpdialog" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:fb="sap.ui.comp.filterbar">
+	<ValueHelpDialog id="permitVHAddOrder" title="{i18n>OrdersVHTitle}" ok=".handleOrderConfirm" cancel=".handleClose" supportMultiselect="true"
+		key="MaintenanceOrder" descriptionKey="MaintenanceOrderDesc" supportRanges="false">
+		<filterBar>
+			<fb:FilterBar id="permitFilterBarMaintOrder" advancedMode="true" search=".onFilterBarSearch">
+				<fb:filterGroupItems>
+					<fb:FilterGroupItem id="permitMaintOrderFilter" groupName="__$INTERNAL$" name="MaintenanceOrder" label="{i18n>Input.OrderNo}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Input.OrderNo}">
+						<fb:control>
+							<m:Input id="idOrder" name="MaintenanceOrder" submit=".searchFilterItem" placeholder="{i18n>Input.OrderNo}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="permitOrderDescFilter" groupName="__$INTERNAL$" name="MaintenanceOrderDesc" label="{i18n>Title.OrdersDesc}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Title.Orders}">
+						<fb:control>
+							<m:Input id="idOrderDesc" name="MaintenanceOrderDesc" submit=".searchFilterItem" placeholder="{i18n>Title.OrdersDesc}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="permitOrderType" groupName="__$INTERNAL$" name="MaintenanceOrderType" label="{i18n>Title.OrdersType}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Title.OrdersType}">
+						<fb:control>
+							<m:Input id="idOrdersType" name="MaintenanceOrderType" submit=".searchFilterItem" placeholder="{i18n>Title.OrdersType}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="permitPlanningTyp" groupName="__$INTERNAL$" name="MaintenancePlanningPlant" label="{i18n>Label.PlanningPlant}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Label.PlanningPlant}">
+						<fb:control>
+							<m:Input id="idMaintenancePlanningPlant" name="MaintenancePlanningPlant" submit=".searchFilterItem" placeholder="{i18n>Label.PlanningPlant}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+				</fb:filterGroupItems>
+			</fb:FilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>

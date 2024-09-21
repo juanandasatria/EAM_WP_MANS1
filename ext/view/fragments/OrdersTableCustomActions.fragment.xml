@@ -1,0 +1,12 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core='sap.ui.core'>
+	<Button id="permitButtonAddOrder" tooltip="{i18n>AssignOrderActionText}" text="{i18n>Button.Add}" press="onOpenValueHelp"/>
+	<Button id="permitButtonUnassignOrder" tooltip="{i18n>UnAssignOrderActionText}" text="{i18n>RemoveActionText}"
+		press="onPressUnAssignOrderAction" enabled="false"/>
+	<Button id="permitButtonAssignOperation" tooltip="{i18n>AssignOperationActionText}" text="{i18n>AssignOperationActionText}"
+		press="handleOperationsValueHelp" enabled="false"/>
+</core:FragmentDefinition>

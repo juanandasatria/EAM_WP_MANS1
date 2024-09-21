@@ -1,0 +1,61 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "DS4",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "ESSA-DEV"
+    },
+    {
+      "path": "/sap/bc/ui5_ui5",
+      "target": {
+        "type": "destination",
+        "name": "DS4",
+        "entryPath": "/sap/bc/ui5_ui5"
+      },
+      "description": "ESSA-DEV"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/resources/sap/se/mi/plm/lib/attachmentservice",
+      "target": {
+        "type": "destination",
+        "name": "DS4",
+        "entryPath": "/sap/bc/ui5_ui5/sap/plm_ath_cres1",
+        "preferLocal": true
+      },
+      "description": "sap/se/mi/plm/lib/attachmentservice Reuse Library"
+    },
+    {
+      "path": "/resources/sap/s4h/cfnd/featuretoggle",
+      "target": {
+        "type": "destination",
+        "name": "DS4",
+        "entryPath": "/sap/bc/ui5_ui5/sap/featuretoggles1",
+        "preferLocal": true
+      },
+      "description": "sap/s4h/cfnd/featuretoggle Reuse Library"
+    }
+  ]
+}

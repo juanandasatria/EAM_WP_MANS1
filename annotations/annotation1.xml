@@ -1,0 +1,453 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+ <edmx:Reference Uri="/sap/opu/odata/sap/UI_WORKPERMIT/$metadata">
+  <edmx:Include Alias="Metadata" Namespace="cds_ui_workpermit"/>
+ </edmx:Reference>
+ <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+  <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+ </edmx:Reference>
+ <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+  <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+ </edmx:Reference>
+ <edmx:DataServices>
+  <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="i2d.eam.workpermit.manages1-11.annotations.annotation1.cds_ui_workpermit">
+   <Annotations Target="Metadata.WorkPermitPartnerType/MaintenancePartner">
+    <Annotation Term="com.sap.vocabularies.Common.v1.ValueListRelevantQualifiers">
+     <Collection>
+      <If>
+       <Eq>
+        <Path>SDDocumentPartnerType</Path>
+        <String>PE</String>
+       </Eq>
+       <String>PersonValueHelp</String>
+      </If>
+      <String>PartnerValueHelp</String>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="Metadata.WorkPermitType">
+    <Annotation Term="Common.SideEffects" Qualifier="RemoveSC">
+     <Record Type="Common.SideEffectsType">
+      <PropertyValue Property="SourceProperties">
+       <Collection>
+        <PropertyPath>to_WrkPmtSafetyCertificate/Delete_mc</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="TargetEntities">
+       <Collection>
+        <NavigationPropertyPath>to_WrkPmtSftyCertApproval</NavigationPropertyPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <!--<Annotation Term="UI.SelectionPresentationVariant" Qualifier="Deleted">-->
+    <!-- <Record Type="UI.SelectionPresentationVariantType">-->
+    <!--  <PropertyValue Property="Text" String="{@i18n&gt;Title.MarkedforDel}"/>-->
+    <!--  <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#Deleted"/>-->
+    <!--  <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#Deleted"/>-->
+    <!-- </Record>-->
+    <!--</Annotation>-->
+    <!--<Annotation Term="UI.SelectionPresentationVariant" Qualifier="Cancelled">-->
+    <!-- <Record Type="UI.SelectionPresentationVariantType">-->
+    <!--  <PropertyValue Property="Text" String="{@i18n&gt;Title.Cancelled}"/>-->
+    <!--  <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#Cancelled"/>-->
+    <!--  <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#Cancelled"/>-->
+    <!-- </Record>-->
+    <!--</Annotation>-->
+    <!--<Annotation Term="UI.SelectionPresentationVariant" Qualifier="Closed">-->
+    <!-- <Record Type="UI.SelectionPresentationVariantType">-->
+    <!--  <PropertyValue Property="Text" String="{@i18n&gt;Title.Closed}"/>-->
+    <!--  <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#Closed"/>-->
+    <!--  <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#Closed"/>-->
+    <!-- </Record>-->
+    <!--</Annotation>-->
+    <!--<Annotation Term="UI.SelectionPresentationVariant" Qualifier="Suspended">-->
+    <!-- <Record Type="UI.SelectionPresentationVariantType">-->
+    <!--  <PropertyValue Property="Text" String="{@i18n&gt;Title.Deactivated}"/>-->
+    <!--  <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#Suspended"/>-->
+    <!--  <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#Suspended"/>-->
+    <!-- </Record>-->
+    <!--</Annotation>-->
+    <!--<Annotation Term="UI.SelectionPresentationVariant" Qualifier="Open">-->
+    <!-- <Record Type="UI.SelectionPresentationVariantType">-->
+    <!--  <PropertyValue Property="Text" String="{@i18n&gt;Title.Open}"/>-->
+    <!--  <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#Open"/>-->
+    <!--  <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#Open"/>-->
+    <!-- </Record>-->
+    <!--</Annotation>-->
+    <!--<Annotation Term="UI.SelectionPresentationVariant" Qualifier="Expired">-->
+    <!-- <Record Type="UI.SelectionPresentationVariantType">-->
+    <!--  <PropertyValue Property="Text" String="{@i18n&gt;Title.Expired}"/>-->
+    <!--  <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#Expired"/>-->
+    <!--  <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#Expired"/>-->
+    <!-- </Record>-->
+    <!--</Annotation>-->
+    <Annotation Term="Common.SideEffects">
+     <Record Type="Common.SideEffectsType">
+      <PropertyValue Property="SourceProperties">
+       <Collection>
+        <PropertyPath>TechnicalObjectLabel</PropertyPath>
+        <PropertyPath>WrkPermitDesc</PropertyPath>
+        <PropertyPath>WorkPermitExternalNumber</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="TargetProperties">
+       <Collection>
+        <PropertyPath>WorkCenter</PropertyPath>
+        <PropertyPath>TechObjAuthorizationGroup</PropertyPath>
+        <PropertyPath>MaintenancePlannerGroup</PropertyPath>
+        <PropertyPath>TechObjIsEquipOrFuncnlLoc</PropertyPath>
+        <PropertyPath>WrkPermitDesc</PropertyPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.Facets">
+     <Collection>
+      <Record Type="UI.CollectionFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;Title.GenInfoTab}"/>
+       <PropertyValue Property="ID" String="GENDATA"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Title.GenInfoTab}"/>
+          <PropertyValue Property="ID" String="CDATA"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BasicData"/>
+             <PropertyValue Property="Label" String="{@i18n&gt;Title.GenData}"/>
+             <PropertyValue Property="ID" String="BasicData"/>
+            </Record>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ReferenceObject"/>
+             <PropertyValue Property="Label" String="{@i18n&gt;Title.RefObject}"/>
+            </Record>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Responsibality"/>
+             <PropertyValue Property="Label" String="{@i18n&gt;Title.Responsibility}"/>
+             <PropertyValue Property="ID" String="General_Information7"/>
+            </Record>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#LocationData"/>
+             <PropertyValue Property="Label" String="{@i18n&gt;Title.LocationData}"/>
+            </Record>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#AdminData"/>
+             <PropertyValue Property="Label" String="{@i18n&gt;Title.AdminData}"/>
+             <PropertyValue Property="ID" String="AdminData"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+         </Record>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Title.NOWData}"/>
+          <PropertyValue Property="ID" String="NOWDATA"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Target" AnnotationPath="to_PermitNatureOfWork/@UI.LineItem"/>
+             <PropertyValue Property="ID" String="NOW"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+         </Record>
+        </Collection>
+       </PropertyValue>
+      </Record>
+      <Record Type="UI.ReferenceFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;Title.TechInfoTab}"/>
+       <PropertyValue Property="ID" String="TechObj"/>
+       <PropertyValue Property="Target" AnnotationPath="to_TechnicalObject/@UI.LineItem#Object"/>
+      </Record>
+      <Record Type="UI.CollectionFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;Title.SafetyTab}"/>
+       <PropertyValue Property="ID" String="CDATA1"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Title.SafetyTab}"/>
+          <PropertyValue Property="ID" String="SPRITM"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Label" String="{@i18n&gt;Title.SafetyTab}"/>
+             <PropertyValue Property="ID" String="SPR"/>
+             <PropertyValue Property="Target" AnnotationPath="to_PermitSftyPrecaution/@UI.LineItem"/>
+             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Input.PPE}"/>
+          <PropertyValue Property="ID" String="PPEITM"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Label" String="{@i18n&gt;Input.PPE}"/>
+             <PropertyValue Property="ID" String="PPE"/>
+             <PropertyValue Property="Target" AnnotationPath="to_PermitProtEquip/@UI.LineItem"/>
+             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+        </Collection>
+       </PropertyValue>
+       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+      </Record>
+      <Record Type="UI.CollectionFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;AssignedCertificatesText}"/>
+       <PropertyValue Property="ID" String="CDATA2"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;SafetyCertificatesText}"/>
+          <PropertyValue Property="ID" String="SFTYCERT"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="ID" String="SC"/>
+             <PropertyValue Property="Target" AnnotationPath="to_WrkPmtSafetyCertificate/@UI.LineItem"/>
+             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;ProcessApprovalsFacetText}"/>
+          <PropertyValue Property="ID" String="PROAPPR"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="ID" String="PA"/>
+             <PropertyValue Property="Target" AnnotationPath="to_WrkPmtSftyCertApproval/@UI.LineItem"/>
+             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+        </Collection>
+       </PropertyValue>
+       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+      </Record>
+      <Record Type="UI.CollectionFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;Title.OrdersTab}"/>
+       <PropertyValue Property="ID" String="CDATA3"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Title.OrdersTab}"/>
+          <PropertyValue Property="ID" String="ORDERS"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Label" String="{@i18n&gt;Title.OrdersTab}"/>
+             <PropertyValue Property="ID" String="ord"/>
+             <PropertyValue Property="Target" AnnotationPath="to_WorkPermitOrder/@UI.LineItem"/>
+             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+        </Collection>
+       </PropertyValue>
+       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+      </Record>
+      <Record Type="UI.ReferenceFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;Title.PartnersTab}"/>
+       <PropertyValue Property="ID" String="Partner"/>
+       <PropertyValue Property="Target" AnnotationPath="to_WorkPermitPartner/@UI.LineItem#Object"/>
+      </Record>
+      <Record Type="UI.CollectionFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;Title.Approvals}"/>
+       <PropertyValue Property="ID" String="APRV"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Title.Approvals}"/>
+          <PropertyValue Property="ID" String="APPROVAL"/>
+          <PropertyValue Property="Facets">
+           <Collection/>
+          </PropertyValue>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+         <Record Type="UI.ReferenceFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Title.Approvals}"/>
+          <PropertyValue Property="ID" String="APPR1"/>
+          <PropertyValue Property="Target" AnnotationPath="to_WorkPermitApproval/@UI.LineItem"/>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Title.ApprovalHis}"/>
+          <PropertyValue Property="ID" String="APPRHIS"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Label" String="{@i18n&gt;Title.ApprovalHis}"/>
+             <PropertyValue Property="ID" String="APPR2"/>
+             <PropertyValue Property="Target" AnnotationPath="to_WrkPmtApprvlSgmt/@UI.LineItem#AprvSeg"/>
+             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+        </Collection>
+       </PropertyValue>
+       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+      </Record>
+      <Record Type="UI.CollectionFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;HISTORY}"/>
+       <PropertyValue Property="ID" String="Hist"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;ISSUE_HISTORY}"/>
+          <PropertyValue Property="ID" String="IssHist"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="Target" AnnotationPath="to_WorkPermitIssHist/@UI.LineItem"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+         </Record>
+        </Collection>
+       </PropertyValue>
+      </Record>
+      <Record Type="UI.CollectionFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;Title.Additional}"/>
+       <PropertyValue Property="ID" String="AddtnlData"/>
+       <PropertyValue Property="Facets">
+        <Collection>
+         <Record Type="UI.CollectionFacet">
+          <PropertyValue Property="Label" String="{@i18n&gt;Title.Additional}"/>
+          <PropertyValue Property="ID" String="Remarks"/>
+          <PropertyValue Property="Facets">
+           <Collection>
+            <Record Type="UI.ReferenceFacet">
+             <PropertyValue Property="ID" String="Remark"/>
+             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Wrkpmtremark"/>
+             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+            </Record>
+           </Collection>
+          </PropertyValue>
+          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+         </Record>
+        </Collection>
+       </PropertyValue>
+       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+      </Record>
+      <Record Type="UI.ReferenceFacet">
+       <PropertyValue Property="Label" String="{@i18n&gt;Title.StatusTab}"/>
+       <PropertyValue Property="ID" String="Status"/>
+       <PropertyValue Property="Target" AnnotationPath="to_WorkPermitStatus/@UI.LineItem#Status"/>
+      </Record>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="Metadata.WorkPermitSafetyPracautionType">
+    <Annotation Term="Common.SideEffects" Qualifier="SPRComments">
+     <Record Type="Common.SideEffectsType">
+      <PropertyValue Property="SourceProperties">
+       <Collection>
+        <PropertyPath>UserCommentsText</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="TargetProperties">
+       <Collection>
+        <PropertyPath>UserCommentsText</PropertyPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+    <Annotation Term="Common.SideEffects">
+     <Record Type="Common.SideEffectsType">
+      <PropertyValue Property="SourceProperties">
+       <Collection>
+        <PropertyPath>WrkPmtSftyRqmtIsImplemented</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="TargetProperties">
+       <Collection>
+        <PropertyPath>CreatedByUser</PropertyPath>
+        <PropertyPath>CreatedByUserName</PropertyPath>
+        <PropertyPath>CreationDateTime</PropertyPath>
+        <PropertyPath>CriticalityText</PropertyPath>
+        <PropertyPath>WrkPmtSftyRqmtCriticalityCode</PropertyPath>
+        <PropertyPath>UserCommentsText_fc</PropertyPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="Metadata.WorkPermitApprovalType">
+    <Annotation Term="Common.SideEffects">
+     <Record Type="Common.SideEffectsType">
+      <PropertyValue Property="SourceProperties">
+       <Collection>
+        <PropertyPath>WorkPermitApprovalComment</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="TargetProperties">
+       <Collection>
+        <PropertyPath>WorkPermitApprovalComment</PropertyPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="Metadata.WorkPermitPartnerType">
+    <Annotation Term="Common.SideEffects">
+     <Record Type="Common.SideEffectsType">
+      <PropertyValue Property="SourceProperties">
+       <Collection>
+        <PropertyPath>MaintenancePartner</PropertyPath>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="TargetProperties">
+       <Collection>
+        <PropertyPath>MaintenancePartner</PropertyPath>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="Metadata.cds_ui_workpermit_Entities/SubmitForApproval">
+    <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
+   </Annotations>
+   <Annotations Target="Metadata.cds_ui_workpermit_Entities/Cancel">
+    <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
+   </Annotations>
+   <Annotations Target="Metadata.cds_ui_workpermit_Entities/SetDeletionFlag">
+    <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
+   </Annotations>
+   <Annotations Target="Metadata.cds_ui_workpermit_Entities/Deactivate">
+    <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
+   </Annotations>
+   <Annotations Target="Metadata.cds_ui_workpermit_Entities/ActivateChanges">
+    <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
+   </Annotations>
+   <Annotations Target="Metadata.cds_ui_workpermit_Entities/SetProcessingStatusToClosed">
+    <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
+   </Annotations>
+   <Annotations Target="Metadata.cds_ui_workpermit_Entities/RevokeRelease">
+    <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
+   </Annotations>
+   <Annotations Target="Metadata.cds_ui_workpermit_Entities/RemoveDeletionFlag">
+    <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
+   </Annotations>
+  </Schema>
+ </edmx:DataServices>
+</edmx:Edmx>

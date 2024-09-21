@@ -1,0 +1,140 @@
+{
+ "Update_mc": true,
+ "WorkPermit": "",
+ "MaintenancePlanningPlant": "",
+ "WrkPmtUsage": "",
+ "WrkPermitDesc": "",
+ "WrkPermitUsageDesc": "",
+ "SystemStatus": "",
+ "MaintenancePlannerGroup": "",
+ "PlannerGroupPlant": "",
+ "WorkCenter": "",
+ "WorkCenterPlant": "",
+ "WorkCenterInternalID": "0",
+ "TechObjAuthorizationGroup": "",
+ "ValidFromDateTime": "/Date(1652940000000+0000)/",
+ "ValidToDateTime": "/Date(1652983200000+0000)/",
+ "TechnicalObject": "",
+ "TechnicalObjectLabel": "",
+ "TechObjIsEquipOrFuncnlLoc": "",
+ "MaintenancePlant": "",
+ "URL": "",
+ "PlantSection": "",
+ "AssetLocation": "",
+ "AssetRoom": "",
+ "PlantName1": "",
+ "MaintenancePlannerGroupName": "",
+ "Valid": "",
+ "WorkPermitPlanningPlant": "",
+ "HasDraftEntity": false,
+ "DraftUUID": "506b4bc3-45cc-1edc-b5d1-c0cbe6c99297",
+ "HasActiveEntity": false,
+ "IsActiveEntity": false,
+ "DraftAdministrativeData": {
+  "DraftUUID": "506b4bc3-45cc-1edc-b5d1-c0cbe6c9b297",
+  "DraftEntityType": "R_WORKPERMITDRAFTTP",
+  "CreationDateTime": "/Date(1652866602000+0000)/",
+  "CreatedByUser": "DUMMY",
+  "LastChangeDateTime": "/Date(1652866664000+0000)/",
+  "LastChangedByUser": "DUMMY",
+  "DraftAccessType": "0",
+  "ProcessingStartDateTime": "/Date(1652866664000+0000)/",
+  "InProcessByUser": "",
+  "DraftIsKeptByUser": true,
+  "EnqueueStartDateTime": "/Date(1652866664000+0000)/",
+  "DraftIsCreatedByMe": true,
+  "DraftIsLastChangedByMe": true,
+  "DraftIsProcessedByMe": false,
+  "CreatedByUserDescription": "DUMMY",
+  "LastChangedByUserDescription": "DUMMY",
+  "InProcessByUserDescription": ""
+ },
+ "Assign_operation_ac": true,
+ "delete_order_op_ac": true,
+ "Edit_ac": true,
+ "ValidateWorkPermit_ac": true,
+ "FunctionalLocation_fc": 3,
+ "to_PermitNatureOfWork_oc": true,
+ "to_PermitProtEquip_oc": true,
+ "to_PermitSftyPrecaution_oc": true,
+ "to_TechnicalObject_oc": true,
+ "to_WorkPermitLongTxt_oc": true,
+ "to_WorkPermitOrder_oc": true,
+ "to_WorkPermitOrderOperation_oc": true,
+ "to_WorkPermitPartner_oc": true,
+ "WorkPermitInternalID": "",
+ "WorkPermitType": "",
+ "UserStatus": "",
+ "WrkPermitValidFrmDate": null,
+ "WrkPermitValidFrmTime": "PT00H00M00S",
+ "WrkPermitValidToDate": null,
+ "WrkPermitValidToTime": "PT00H00M00S",
+ "WrkPmtMgmtPriority": "",
+ "ObjectTypeCode": "",
+ "OperationWorkCenterInternalID": "0",
+ "CreatedByUser": "DUMMY",
+ "CreationDateTime": "\/Date(1660895632000+0000)\/",
+ "LastChangedByUser": "DUMMY",
+ "LastChangedByUserName": "",
+ "LastChangeDateTime": null,
+ "WrkPmtMgmtObjSubType": "",
+ "MaintPriorityType": "",
+ "FunctionalLocation": "",
+ "WrkPermitHasMaintRemark": false,
+ "WrkPermitHasOpRemark": false,
+ "SearchURLAddress": "",
+ "MaintenancePlanningPlantName": "",
+ "WorkPermitHasLongText": false,
+ "WorkPermitLongText": "",
+ "WorkPermitReferenceObjectType": "",
+ "WorkPermitReferenceObjTypeDesc": "",
+ "WorkPermitTypeDescription": "",
+ "MaintenanceOrder": "",
+ "DraftEntityCreationDateTime": "\/Date(1660895632402+0000)\/",
+ "DraftEntityLastChangeDateTime": "\/Date(1660895632402+0000)\/",
+ "SiblingEntity": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/SiblingEntity"
+  }
+ },
+ "to_PermitNatureOfWork": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/to_PermitNatureOfWork"
+  }
+ },
+ "to_PermitProtEquip": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/to_PermitProtEquip"
+  }
+ },
+ "to_PermitSftyPrecaution": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/to_PermitSftyPrecaution"
+  }
+ },
+ "to_TechnicalObject": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/to_TechnicalObject"
+  }
+ },
+ "to_WorkPermitLongTxt": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/to_WorkPermitLongTxt"
+  }
+ },
+ "to_WorkPermitOrder": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/to_WorkPermitOrder"
+  }
+ },
+ "to_WorkPermitOrderOperation": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/to_WorkPermitOrderOperation"
+  }
+ },
+ "to_WorkPermitPartner": {
+  "__deferred": {
+   "uri": "./sap/opu/odata/sap/UI_WORKPERMIT/WorkPermit(WorkPermit='',DraftUUID=guid'42010aef-4c96-1edd-87f2-821cbd1d20c0',IsActiveEntity=false)/to_WorkPermitPartner"
+  }
+ }
+}

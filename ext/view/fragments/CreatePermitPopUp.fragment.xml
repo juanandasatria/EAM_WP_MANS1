@@ -1,0 +1,87 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartField="sap.ui.comp.smartfield" xmlns:form="sap.ui.comp.smartform"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog id="idCreatePermitDialog" title="{i18n>Title.CreatePermitTitl}" showHeader="true" draggable="true" escapeHandler=".escapeHandler"
+		afterClose="onCreateDialogCloseButton" contentWidth="30%">
+		<form:SmartForm id="permitSmartForm" editable="true">
+			<form:layout>
+				<form:ColumnLayout id="permitColumnLayout" columnsM="1" columnsL="1" columnsXL="1"/>
+			</form:layout>
+			<form:Group id="permitGroup">
+				<form:GroupElement id="permitGroupElementPlant">
+					<smartField:SmartField id="permitInputPlanningPlant" entitySet="WorkPermit" value="{MaintenancePlanningPlant}" mandatory="true"
+						showValueHelp="true" change="handlePlanningPlantValueChange" showSuggestion="true" placeholder="{i18n>PlaceHolder.PlanningPlant}"
+						tooltipLabel="{i18n>Label.PlanningPlant}" textInEditModeSource="ValueListNoValidation">
+						<smartField:configuration>
+							<smartField:Configuration id="permiConfigPlant" displayBehaviour="descriptionAndId" preventInitialDataFetchInValueHelpDialog="false"/>
+						</smartField:configuration>
+					</smartField:SmartField>
+				</form:GroupElement>
+				<form:GroupElement id="permitGroupElementPermitType">
+					<smartField:SmartField id="permitInputPermitType" entitySet="WorkPermit" value="{WorkPermitType}" mandatory="true" showValueHelp="true"
+						change="handlePermitTypeValueChange" showSuggestion="true" placeholder="{i18n>PlaceHolder.PermitType}"
+						tooltipLabel="{i18n>Label.PermitType}" textInEditModeSource="ValueListNoValidation">
+						<smartField:configuration>
+							<smartField:Configuration id="permiConfigPermitType" displayBehaviour="descriptionAndId" preventInitialDataFetchInValueHelpDialog="false"/>
+						</smartField:configuration>
+					</smartField:SmartField>
+				</form:GroupElement>
+				<!--External Permit Number Field-->
+				<form:GroupElement id="permitGroupElementPermitNum" visible="false" label="{i18n>Label.PermitNumber}">
+					<Input id="permitInputPermitNum" maxLength="12" placeholder="{i18n>PlaceHolder.PermitNumber}"/>
+				</form:GroupElement>
+				<!-- Maintenance Order -->
+				<form:GroupElement id="permitGroupElementMO">
+					<smartField:SmartField id="permitInputMO" entitySet="WorkPermit" value="{MaintenanceOrder}" mandatory="false" showValueHelp="true"
+						tooltipLabel="{i18n>Label.MaintenanceOrder}" placeholder="{i18n>PlaceHolder.MaintenanceOrder}" showSuggestion="true"
+						textInEditModeSource="ValueListNoValidation">
+						<smartField:configuration>
+							<smartField:Configuration id="permiConfigMO" displayBehaviour="descriptionAndId" preventInitialDataFetchInValueHelpDialog="false"/>
+						</smartField:configuration>
+					</smartField:SmartField>
+				</form:GroupElement>
+				<!-- Copy From Selection-->
+				<form:GroupElement id="permitCopyFrom" label="{i18n>CreateWithReferenceText}">
+					<smartField:SmartField id="refObjTypSel" value="{WorkPermitReferenceObjectType}" entitySet="WorkPermit"
+						placeholder="{i18n>CreateWithReferencePlaceHolder}" change="onChangeCopyFrom" tooltipLabel="{i18n>CreateWithReferenceText}"
+						textInEditModeSource="NavigationProperty" fixedValueListValidationEnabled="true" innerControlsCreated="onCategoryFieldCreated">
+						<smartField:configuration>
+							<smartField:Configuration preventInitialDataFetchInValueHelpDialog="false" displayBehaviour="descriptionAndId"/>
+						</smartField:configuration>
+					</smartField:SmartField>
+				</form:GroupElement>
+				<!--Reference Work Permit template-->
+				<form:GroupElement id="permitGroupElementTempNum">
+					<smartField:SmartField id="permitInputTempNum" entitySet="WorkPermit" value="{WorkPermitReference}" showValueHelp="true"
+						textInEditModeSource="ValueListNoValidation" placeholder="{i18n>PlaceHolder.SelectWorkPermitTemplate}" showSuggestion="true">
+						<smartField:configuration>
+							<smartField:Configuration id="permiConfigTempNum" displayBehaviour="descriptionAndId" preventInitialDataFetchInValueHelpDialog="false"/>
+						</smartField:configuration>
+					</smartField:SmartField>
+				</form:GroupElement>
+				<!--Reference Work Permit-->
+				<form:GroupElement id="permitGroupElementNum" visible="false">
+					<smartField:SmartField id="wrkPmtRefernce" entitySet="WorkPermit" value="{WorkPermitReferenceWorkPermit}" showValueHelp="true"
+						tooltipLabel="{i18n>Label.SelectWorkPermit}" textInEditModeSource="ValueListNoValidation" placeholder="{i18n>PlaceHolder.SelectWorkPermit}"
+						showSuggestion="true">
+						<smartField:configuration>
+							<smartField:Configuration id="permiConfigNum" displayBehaviour="descriptionAndId" preventInitialDataFetchInValueHelpDialog="false"/>
+						</smartField:configuration>
+					</smartField:SmartField>
+				</form:GroupElement>
+			</form:Group>
+		</form:SmartForm>
+		<beginButton>
+			<Button id="permitButtonCreatePermit" tooltip="{i18n>Button.CreatePermit}" text="{i18n>Button.CreatePermit}" type="Emphasized"
+				app:dialogType="Std" press="handleCreatePermitButton"/>
+		</beginButton>
+		<endButton>
+			<Button id="permitButtonCancel" tooltip="{i18n>Button.Close}" text="{i18n>Button.Close}" app:dialogType="Std"
+				press="handleClosePermitButton"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,31 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartField="sap.ui.comp.smartfield" xmlns:form="sap.ui.comp.smartform"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog id="idPartnerDialog" title="{i18n>ParnterDialogTitle}" showHeader="true" draggable="true" afterClose="onCreateDialogCloseButton"
+		contentWidth="30%">
+		<form:SmartForm id="permitSmartForm" editable="true">
+			<form:layout>
+				<form:ColumnLayout id="permitColumnLayout" columnsM="1" columnsL="1" columnsXL="1"/>
+			</form:layout>
+			<form:Group id="permitGroup">
+				<form:GroupElement id="permitGroupElementPartner" label="{i18n>Input.PartnerFunction}" >
+					<Select id="permitInputPartner" forceSelection="false" items="{ path: '/PermitPartnerFunctionVH', sorter: { path: 'PartnerFunctionName' }}"
+						ariaLabelledBy="permitGroupElementPartner">
+						<core:Item id="partnerItem" key="{PartnerFunction}" text="{PartnerFunctionName}"/>
+					</Select>
+				</form:GroupElement>
+			</form:Group>
+		</form:SmartForm>
+		<beginButton>
+			<Button id="permitButtonPartner" tooltip="{i18n>Button.Add}" text="{i18n>Button.Add}" type="Emphasized" app:dialogType="Std"
+				press="handlePartnerConfirm"/>
+		</beginButton>
+		<endButton>
+			<Button id="permitButtonCancel" tooltip="{i18n>Button.Close}" text="{i18n>Button.Close}" app:dialogType="Std" press="handlePartnerClose"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

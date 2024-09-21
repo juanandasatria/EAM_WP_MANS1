@@ -1,0 +1,13 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Column id="ExtensionWizard::ColumnBreakoutOperations">
+		<Text text="{i18n>OperationsText}"/>
+		<customData>
+			<core:CustomData key="p13nData" value='\{"columnKey": "MaintenanceOrderOperation", "columnIndex" : "6"}'/>
+		</customData>
+	</Column>
+</core:FragmentDefinition>

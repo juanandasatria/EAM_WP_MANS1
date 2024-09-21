@@ -1,0 +1,29 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:smartField="sap.ui.comp.smartfield" xmlns:form="sap.ui.comp.smartform"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog id="idExtendPermitDialog" title="{i18n>Title.ExtendPermitTitl}" showHeader="true" draggable="true" escapeHandler=".escapeHandler"
+		afterClose="onExtendDialogCloseButton" contentWidth="30%">
+		<f:SimpleForm id="permitSmartForm"
+			layout="ResponsiveGridLayout"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="{i18n>Label.ValidityEnd}" />
+				<DateTimePicker id="idvaliditydate"
+						value="{ path:'/value', type:'sap.ui.model.type.DateTime',formatOptions: { style: 'medium', strictParsing: true } }"
+						class="sapUiSmallMarginBottom"/>
+			</f:content>
+		</f:SimpleForm>
+		<beginButton>
+			<Button id="permitButtonExtendPermit" tooltip="{i18n>Actn.ExtendPermit}" text="{i18n>Actn.ExtendPermit}" type="Emphasized" enabled="true"
+				app:dialogType="Std" press="handleExtndPermitButton"/>
+		</beginButton>
+		<endButton>
+			<Button id="permitButtonCancel" tooltip="{i18n>Button.Close}" text="{i18n>Button.Close}" app:dialogType="Std"
+				press="handleCloseExtPopupButton"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

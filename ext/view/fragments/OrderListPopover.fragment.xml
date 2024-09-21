@@ -1,0 +1,19 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns:f="sap.f">
+ <Popover id="idOrderListPopover" showHeader="false" contentWidth="21em" contentHeight="30em" placement="Auto">
+  <NavContainer id="idOrderListnavCon">
+   <Page id="idOrderListmaster" class="sapUiResponsivePadding--header" title="{assignedOrderList>/title}">
+    <List id="idOrderlistContent" items="{path: 'assignedOrderList>/data'}" growing="true" growingThreshold="5" growingScrollToLoad="true">
+     <StandardListItem id="idOrderListItem" 
+         title="{ parts : [ 'assignedOrderList>MaintenanceOrderDesc' , 'assignedOrderList>MaintenanceOrder' ], formatter : '.formatMaintOrderListExt' }" 
+      icon="sap-icon://notification-2" iconDensityAware="false" iconInset="false" 
+      type="Navigation" press=".onNavOrderPress"/>
+    </List>
+   </Page>
+  </NavContainer>
+ </Popover>
+</core:FragmentDefinition>

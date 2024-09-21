@@ -1,0 +1,28 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.ui.comp.valuehelpdialog" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:fb="sap.ui.comp.filterbar">
+	<ValueHelpDialog id="permitVHAddPPE" title="{i18n>PPEVHTitle}" ok=".handlePPEConfirm" cancel=".handleClose" supportMultiselect="true"
+		key="WorkPermitSafetyRequirement" descriptionKey="WrkPmtSafetyRequirementText" supportRanges="false">
+		<filterBar>
+			<fb:FilterBar id="permitFilterBarPPE" advancedMode="true" search=".onFilterBarSearch">
+				<fb:filterGroupItems>
+					<fb:FilterGroupItem id="permitFilterGrpItem" groupName="__$INTERNAL$" name="WrkPmtSafetyRequirementText" label="{i18n>Input.PPE}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Input.PPE}">
+						<fb:control>
+							<m:Input id="idItemPPE" name="WrkPmtSafetyRequirementText" placeholder="{i18n>Input.PPE}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="permitFilterGrpCat" groupName="__$INTERNAL$" name="WrkPmtSftyRequirementGroupText" label="{i18n>Title.Category}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Title.Category}">
+						<fb:control>
+							<m:Input id="idCategoryPPE" name="WrkPmtSftyRequirementGroupText" placeholder="{i18n>Title.Category}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+				</fb:filterGroupItems>
+			</fb:FilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>

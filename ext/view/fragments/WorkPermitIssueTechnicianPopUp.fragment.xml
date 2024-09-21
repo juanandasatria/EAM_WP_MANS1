@@ -1,0 +1,40 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartField="sap.ui.comp.smartfield" xmlns:form="sap.ui.comp.smartform"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog id="idIssuePermitDialog" title="{i18n>Title.HandOutPermitTitl}" showHeader="true" draggable="true" escapeHandler=".escapeHandler"
+		afterClose="onIssueDialogCloseButton" contentWidth="30%">
+		<form:SmartForm id="permitSmartForm" editable="true">
+			<form:layout>
+				<form:ColumnLayout id="permitColumnLayout" columnsM="1" columnsL="1" columnsXL="1"/>
+			</form:layout>
+			<form:Group id="permitGroup">
+				<form:GroupElement id="permitGroupElementTechn">
+					<smartField:SmartField id="permitInputTech" entitySet="WorkPermit" value="{MaintOrdPersonResponsible}" mandatory="false"
+						showValueHelp="true" change="handleTechValueChange" tooltipLabel="{i18n>Label.IssuedTo}" placeholder="{i18n>PlaceHolder.IssuedTo}" showSuggestion="false"
+						initialise="handleTechnicianValueHelp" textInEditModeSource="ValueListNoValidation" >
+						<smartField:configuration>
+							<smartField:Configuration id="permiConfigTech" displayBehaviour="descriptionAndId" preventInitialDataFetchInValueHelpDialog="false"/>
+						</smartField:configuration>
+					</smartField:SmartField>
+				</form:GroupElement>
+				<form:GroupElement id="permitGroupElementComment">
+					<smartField:SmartField id="permitInputIssueComment" entitySet="WorkPermit"  value="{UserCommentsText}" placeholder="{i18n>PlaceHolder.Comments}"
+						 change="handleCommentChange" tooltipLabel="{i18n>Label.Comments}" >
+					</smartField:SmartField>
+				</form:GroupElement>
+			</form:Group>
+		</form:SmartForm>
+		<beginButton>
+			<Button id="permitButtonHandOutPermit" tooltip="{i18n>Button.IssuePermit}" text="{i18n>Button.IssuePermit}" type="Emphasized"
+				enabled="true" app:dialogType="Std" press="handleIssuePermitButton"/>
+		</beginButton>
+		<endButton>
+			<Button id="permitButtonCancel" tooltip="{i18n>Button.Close}" text="{i18n>Button.Close}" app:dialogType="Std"
+				press="handleClosePopupButton"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

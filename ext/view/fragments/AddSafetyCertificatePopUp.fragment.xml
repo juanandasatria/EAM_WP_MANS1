@@ -1,0 +1,46 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.ui.comp.valuehelpdialog" xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns:fb="sap.ui.comp.filterbar">
+	<ValueHelpDialog id="permitVHAddSafetyCert" title="{i18n>SafetyCertificateVHTitle}" ok=".handleSafetyConfirm" cancel=".handleClose"
+		supportMultiselect="true" key="SafetyCertificateType" descriptionKey="SafetyCertificate" supportRanges="false">
+		<filterBar>
+			<fb:FilterBar id="permitFilterBarSafetyCert" filterBarExpanded="false" advancedMode="true" search=".onFilterBarSearch">
+				<fb:filterGroupItems>
+					<fb:FilterGroupItem id="permitFilterGrpItem" groupName="__$INTERNAL$" name="SafetyCertificate" label="{i18n>SftyCertificateNumber}"
+						visibleInFilterBar="true" controlTooltip="{i18n>SftyCertificateNumber}">
+						<fb:control>
+							<m:Input id="idItemSfty" name="SafetyCertificate" placeholder="{i18n>SftyCertificateNumber}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="permitFilterGrpCat" groupName="__$INTERNAL$" name="SafetyCertificateType" label="{i18n>SftyCertificateType}"
+						visibleInFilterBar="true" controlTooltip="{i18n>SftyCertificateType}">
+						<fb:control>
+							<m:Input id="idCategorySfty" name="SafetyCertificateType" placeholder="{i18n>SftyCertificateType}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="TechnicalObjectLabel" groupName="__$INTERNAL$" name="TechnicalObjectLabel" label="{i18n>Title.TechObj}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Title.TechObj}">
+						<fb:control>
+							<m:Input id="TechnicalObjectLabelInput" name="TechnicalObjectLabel" placeholder="{i18n>Title.TechObj}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="sftyCertProcessingStatusText" groupName="__$INTERNAL$" name="SftyCertProcessingStatusText"
+						label="{i18n>Title.ProcessingStatus}" visibleInFilterBar="true" controlTooltip="{i18n>Title.ProcessingStatus}">
+						<fb:control>
+							<m:Input id="sftyCertProcessingStatusInput" name="SftyCertProcessingStatusText" placeholder="{i18n>Title.ProcessingStatus}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+					<fb:FilterGroupItem id="permitPlanningTyp" groupName="__$INTERNAL$" name="MaintenancePlanningPlant" label="{i18n>Label.PlanningPlant}"
+						visibleInFilterBar="true" controlTooltip="{i18n>Label.PlanningPlant}">
+						<fb:control>
+							<m:Input id="idMaintenancePlanningPlant" name="MaintenancePlanningPlant" submit=".searchFilterItem" placeholder="{i18n>Label.PlanningPlant}"/>
+						</fb:control>
+					</fb:FilterGroupItem>
+				</fb:filterGroupItems>
+			</fb:FilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>

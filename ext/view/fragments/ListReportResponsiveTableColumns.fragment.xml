@@ -1,0 +1,14 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" id="idFragmentListReportColumnFrag">
+ <Column id="idListReportExtOrderColumn" hAlign="Left" importance="low">
+  <Label id="idListReportExtOrderLabel" text="{/WorkPermit/ActiveMaintenanceOrder/#@sap:label}"/>
+  <customData>
+   <core:CustomData key="p13nData"
+    value='\{"columnKey": "ActiveMaintenanceOrder", "columnIndex" : "9999","leadingProperty": "ActiveMaintenanceOrder"}'/>
+  </customData>
+ </Column>
+</core:FragmentDefinition>

@@ -1,0 +1,1411 @@
+[{
+	"Cancel_ac": true,
+	"CheckAuthorization_ac": true,
+	"Edit_ac": false,
+	"SetDeletionFlag_ac": false,
+	"UnassignJobs_ac": true,
+	"Validate_ac": false,
+	"FunctionalLocation_fc": 0,
+	"Update_mc": false,
+	"to_PermitNatureOfWork_oc": true,
+	"to_PermitProtEquip_oc": false,
+	"to_PermitSftyPrecaution_oc": false,
+	"to_TechnicalObject_oc": true,
+	"to_WorkPermitApproval_oc": true,
+	"to_WorkPermitLongTxt_oc": true,
+	"to_WorkPermitOrder_oc": false,
+	"to_WorkPermitOrderOperation_oc": false,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "",
+	"WorkPermitInternalID": "100000010",
+	"MaintenancePlanningPlant": "",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 2",
+	"ValidationScenarioID": "ValidationScenarioID 2",
+	"WorkPermitType": "",
+	"WrkPermitDesc": "",
+	"WrkPermitValidFrmDate": "\/Date(1663113600000)\/",
+	"WrkPermitValidFrmTime": "PT10H00M00S",
+	"WrkPermitValidToDate": "\/Date(1663113600000)\/",
+	"WrkPermitValidToTime": "PT17H00M00S",
+	"MaintenancePlannerGroup": "",
+	"WorkCenter": "WorkCenter 2",
+	"WorkCenterText": "WorkCenterText 2",
+	"ObjectTypeCode": "ObjectTypeCode 2",
+	"OperationWorkCenterInternalID": "0",
+	"WorkCenterPlant": "",
+	"TechObjAuthorizationGroup": "",
+	"CreatedByUser": "CreatedByUser 2",
+	"CreatedByUserName": "CreatedByUserName 2",
+	"CreationDateTime": "/Date(1442992350000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 2",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 2",
+	"LastChangedByUserName": "LastChangedByUserName 2",
+	"LastChangeDateTime": "/Date(1561705950000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 2",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 2",
+	"WrkPermitHasMaintRemark": false,
+	"WrkPermitHasOpRemark": false,
+	"TechnicalObject": "TechnicalObject 2",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 2",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 2",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 2",
+	"MaintenancePlant": "MaintenancePlant 2",
+	"MaintenancePlantName": "MaintenancePlantName 2",
+	"SearchURLAddress": "SearchURLAddress 2",
+	"PlantSection": "PlantSection 2",
+	"PlantSectionDesc": "PlantSectionDesc 2",
+	"AssetLocation": "AssetLocation 2",
+	"LocationName": "LocationName 2",
+	"AssetRoom": "AssetRoom 2",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 2",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 2",
+	"WorkPermitHasLongText": false,
+	"WorkPermitLongText": "WorkPermitLongText 2",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 2",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 2",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 2",
+	"MaintenanceOrder": "MaintenanceOrder 2",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": false,
+	"DraftUUID": "42010aef-4c96-1edd-88ba-b09c1931804a",
+	"DraftEntityCreationDateTime": "/Date(1132470750000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(1378883550000+0000)/",
+	"HasActiveEntity": false,
+	"IsActiveEntity": false,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'42010aef-4c96-1edd-88ba-b09c1931804a',IsActiveEntity=false)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": true,
+	"CheckAuthorization_ac": true,
+	"Edit_ac": false,
+	"SetDeletionFlag_ac": false,
+	"UnassignJobs_ac": true,
+	"Validate_ac": false,
+	"FunctionalLocation_fc": 0,
+	"Update_mc": false,
+	"to_PermitNatureOfWork_oc": true,
+	"to_PermitProtEquip_oc": false,
+	"to_PermitSftyPrecaution_oc": false,
+	"to_TechnicalObject_oc": true,
+	"to_WorkPermitApproval_oc": true,
+	"to_WorkPermitLongTxt_oc": true,
+	"to_WorkPermitOrder_oc": false,
+	"to_WorkPermitOrderOperation_oc": false,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "WorkPermit 2",
+	"WorkPermitInternalID": "WorkPermitInternalID 2",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 2",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 2",
+	"ValidationScenarioID": "ValidationScenarioID 2",
+	"WorkPermitType": "WorkPermitType 2",
+	"WrkPermitDesc": "WrkPermitDesc 2",
+	"WrkPermitValidFrmDate": "/Date(1485846750000)/",
+	"WrkPermitValidFrmTime": "PT11H45M0S",
+	"WrkPermitValidToDate": "/Date(1545894750000)/",
+	"WrkPermitValidToTime": "PT19H56M47S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 2",
+	"WorkCenter": "WorkCenter 2",
+	"WorkCenterText": "WorkCenterText 2",
+	"ObjectTypeCode": "ObjectTypeCode 2",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 2",
+	"WorkCenterPlant": "WorkCenterPlant 2",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 2",
+	"CreatedByUser": "CreatedByUser 2",
+	"CreatedByUserName": "CreatedByUserName 2",
+	"CreationDateTime": "/Date(1442992350000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 2",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 2",
+	"LastChangedByUserName": "LastChangedByUserName 2",
+	"LastChangeDateTime": "/Date(1561705950000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 2",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 2",
+	"WrkPermitHasMaintRemark": false,
+	"WrkPermitHasOpRemark": false,
+	"TechnicalObject": "TechnicalObject 2",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 2",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 2",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 2",
+	"MaintenancePlant": "MaintenancePlant 2",
+	"MaintenancePlantName": "MaintenancePlantName 2",
+	"SearchURLAddress": "SearchURLAddress 2",
+	"PlantSection": "PlantSection 2",
+	"PlantSectionDesc": "PlantSectionDesc 2",
+	"AssetLocation": "AssetLocation 2",
+	"LocationName": "LocationName 2",
+	"AssetRoom": "AssetRoom 2",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 2",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 2",
+	"WorkPermitHasLongText": false,
+	"WorkPermitLongText": "WorkPermitLongText 2",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 2",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 2",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 2",
+	"MaintenanceOrder": "MaintenanceOrder 2",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": false,
+	"DraftUUID": "e5b9a901-3965-45de-8cb3-025953135e9d",
+	"DraftEntityCreationDateTime": "/Date(1132470750000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(1378883550000+0000)/",
+	"HasActiveEntity": true,
+	"IsActiveEntity": false,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%202',DraftUUID=guid'e5b9a901-3965-45de-8cb3-025953135e9d',IsActiveEntity=false)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": true,
+	"CheckAuthorization_ac": true,
+	"Edit_ac": true,
+	"SetDeletionFlag_ac": true,
+	"UnassignJobs_ac": false,
+	"Validate_ac": true,
+	"FunctionalLocation_fc": 4,
+	"Update_mc": false,
+	"to_PermitNatureOfWork_oc": true,
+	"to_PermitProtEquip_oc": false,
+	"to_PermitSftyPrecaution_oc": true,
+	"to_TechnicalObject_oc": true,
+	"to_WorkPermitApproval_oc": true,
+	"to_WorkPermitLongTxt_oc": false,
+	"to_WorkPermitOrder_oc": true,
+	"to_WorkPermitOrderOperation_oc": false,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "WorkPermit 3",
+	"WorkPermitInternalID": "WorkPermitInternalID 3",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 3",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 3",
+	"ValidationScenarioID": "ValidationScenarioID 3",
+	"WorkPermitType": "WorkPermitType 3",
+	"WrkPermitDesc": "WrkPermitDesc 3",
+	"WrkPermitValidFrmDate": "/Date(1316934750000)/",
+	"WrkPermitValidFrmTime": "PT7H3M28S",
+	"WrkPermitValidToDate": "/Date(1088406750000)/",
+	"WrkPermitValidToTime": "PT9H44M46S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 3",
+	"WorkCenter": "WorkCenter 3",
+	"WorkCenterText": "WorkCenterText 3",
+	"ObjectTypeCode": "ObjectTypeCode 3",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 3",
+	"WorkCenterPlant": "WorkCenterPlant 3",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 3",
+	"CreatedByUser": "CreatedByUser 3",
+	"CreatedByUserName": "CreatedByUserName 3",
+	"CreationDateTime": "/Date(1080112350000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 3",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 3",
+	"LastChangedByUserName": "LastChangedByUserName 3",
+	"LastChangeDateTime": "/Date(1474960350000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 3",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 3",
+	"WrkPermitHasMaintRemark": true,
+	"WrkPermitHasOpRemark": true,
+	"TechnicalObject": "TechnicalObject 3",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 3",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 3",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 3",
+	"MaintenancePlant": "MaintenancePlant 3",
+	"MaintenancePlantName": "MaintenancePlantName 3",
+	"SearchURLAddress": "SearchURLAddress 3",
+	"PlantSection": "PlantSection 3",
+	"PlantSectionDesc": "PlantSectionDesc 3",
+	"AssetLocation": "AssetLocation 3",
+	"LocationName": "LocationName 3",
+	"AssetRoom": "AssetRoom 3",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 3",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 3",
+	"WorkPermitHasLongText": false,
+	"WorkPermitLongText": "WorkPermitLongText 3",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 3",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 3",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 3",
+	"MaintenanceOrder": "MaintenanceOrder 3",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": true,
+	"DraftUUID": "6b697d03-6dd2-466b-90ac-3555b4237ec2",
+	"DraftEntityCreationDateTime": "/Date(1189926750000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(1557472350000+0000)/",
+	"HasActiveEntity": false,
+	"IsActiveEntity": false,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%203',DraftUUID=guid'6b697d03-6dd2-466b-90ac-3555b4237ec2',IsActiveEntity=false)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": true,
+	"CheckAuthorization_ac": false,
+	"Edit_ac": true,
+	"SetDeletionFlag_ac": true,
+	"UnassignJobs_ac": false,
+	"Validate_ac": true,
+	"FunctionalLocation_fc": 7,
+	"Update_mc": false,
+	"to_PermitNatureOfWork_oc": false,
+	"to_PermitProtEquip_oc": false,
+	"to_PermitSftyPrecaution_oc": false,
+	"to_TechnicalObject_oc": true,
+	"to_WorkPermitApproval_oc": true,
+	"to_WorkPermitLongTxt_oc": true,
+	"to_WorkPermitOrder_oc": false,
+	"to_WorkPermitOrderOperation_oc": true,
+	"to_WorkPermitPartner_oc": false,
+	"WorkPermit": "WorkPermit 4",
+	"WorkPermitInternalID": "WorkPermitInternalID 4",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 4",
+	"WrkPmtOrdOpAssgmtIsAllowed": true,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 4",
+	"ValidationScenarioID": "ValidationScenarioID 4",
+	"WorkPermitType": "WorkPermitType 4",
+	"WrkPermitDesc": "WrkPermitDesc 4",
+	"WrkPermitValidFrmDate": "/Date(1074237150000)/",
+	"WrkPermitValidFrmTime": "PT8H36M41S",
+	"WrkPermitValidToDate": "/Date(1203923550000)/",
+	"WrkPermitValidToTime": "PT7H17M39S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 4",
+	"WorkCenter": "WorkCenter 4",
+	"WorkCenterText": "WorkCenterText 4",
+	"ObjectTypeCode": "ObjectTypeCode 4",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 4",
+	"WorkCenterPlant": "WorkCenterPlant 4",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 4",
+	"CreatedByUser": "CreatedByUser 4",
+	"CreatedByUserName": "CreatedByUserName 4",
+	"CreationDateTime": "/Date(1008745950000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 4",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 4",
+	"LastChangedByUserName": "LastChangedByUserName 4",
+	"LastChangeDateTime": "/Date(1334992350000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 4",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 4",
+	"WrkPermitHasMaintRemark": false,
+	"WrkPermitHasOpRemark": false,
+	"TechnicalObject": "TechnicalObject 4",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 4",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 4",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 4",
+	"MaintenancePlant": "MaintenancePlant 4",
+	"MaintenancePlantName": "MaintenancePlantName 4",
+	"SearchURLAddress": "SearchURLAddress 4",
+	"PlantSection": "PlantSection 4",
+	"PlantSectionDesc": "PlantSectionDesc 4",
+	"AssetLocation": "AssetLocation 4",
+	"LocationName": "LocationName 4",
+	"AssetRoom": "AssetRoom 4",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 4",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 4",
+	"WorkPermitHasLongText": true,
+	"WorkPermitLongText": "WorkPermitLongText 4",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 4",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 4",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 4",
+	"MaintenanceOrder": "MaintenanceOrder 4",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": false,
+	"DraftUUID": "bc1492dc-d28c-4d5e-a517-5dd6fd34262d",
+	"DraftEntityCreationDateTime": "/Date(1480576350000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(1539155550000+0000)/",
+	"HasActiveEntity": true,
+	"IsActiveEntity": false,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%204',DraftUUID=guid'bc1492dc-d28c-4d5e-a517-5dd6fd34262d',IsActiveEntity=false)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": false,
+	"CheckAuthorization_ac": true,
+	"Edit_ac": true,
+	"SetDeletionFlag_ac": true,
+	"UnassignJobs_ac": true,
+	"Validate_ac": false,
+	"FunctionalLocation_fc": 6,
+	"Update_mc": false,
+	"to_PermitNatureOfWork_oc": true,
+	"to_PermitProtEquip_oc": true,
+	"to_PermitSftyPrecaution_oc": true,
+	"to_TechnicalObject_oc": false,
+	"to_WorkPermitApproval_oc": false,
+	"to_WorkPermitLongTxt_oc": false,
+	"to_WorkPermitOrder_oc": true,
+	"to_WorkPermitOrderOperation_oc": false,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "WorkPermit 5",
+	"WorkPermitInternalID": "WorkPermitInternalID 5",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 5",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 5",
+	"ValidationScenarioID": "ValidationScenarioID 5",
+	"WorkPermitType": "WorkPermitType 5",
+	"WrkPermitDesc": "WrkPermitDesc 5",
+	"WrkPermitValidFrmDate": "/Date(1366009950000)/",
+	"WrkPermitValidFrmTime": "PT7H12M5S",
+	"WrkPermitValidToDate": "/Date(1217661150000)/",
+	"WrkPermitValidToTime": "PT16H27M32S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 5",
+	"WorkCenter": "WorkCenter 5",
+	"WorkCenterText": "WorkCenterText 5",
+	"ObjectTypeCode": "ObjectTypeCode 5",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 5",
+	"WorkCenterPlant": "WorkCenterPlant 5",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 5",
+	"CreatedByUser": "CreatedByUser 5",
+	"CreatedByUserName": "CreatedByUserName 5",
+	"CreationDateTime": "/Date(1345792350000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 5",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 5",
+	"LastChangedByUserName": "LastChangedByUserName 5",
+	"LastChangeDateTime": "/Date(1473923550000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 5",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 5",
+	"WrkPermitHasMaintRemark": false,
+	"WrkPermitHasOpRemark": false,
+	"TechnicalObject": "TechnicalObject 5",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 5",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 5",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 5",
+	"MaintenancePlant": "MaintenancePlant 5",
+	"MaintenancePlantName": "MaintenancePlantName 5",
+	"SearchURLAddress": "SearchURLAddress 5",
+	"PlantSection": "PlantSection 5",
+	"PlantSectionDesc": "PlantSectionDesc 5",
+	"AssetLocation": "AssetLocation 5",
+	"LocationName": "LocationName 5",
+	"AssetRoom": "AssetRoom 5",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 5",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 5",
+	"WorkPermitHasLongText": false,
+	"WorkPermitLongText": "WorkPermitLongText 5",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 5",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 5",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 5",
+	"MaintenanceOrder": "MaintenanceOrder 5",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": true,
+	"DraftUUID": "79327a91-b4d3-4ca4-94c7-12a47e522f53",
+	"DraftEntityCreationDateTime": "/Date(1204182750000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(1316416350000+0000)/",
+	"HasActiveEntity": true,
+	"IsActiveEntity": false,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%205',DraftUUID=guid'79327a91-b4d3-4ca4-94c7-12a47e522f53',IsActiveEntity=false)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": true,
+	"CheckAuthorization_ac": false,
+	"Edit_ac": true,
+	"SetDeletionFlag_ac": true,
+	"UnassignJobs_ac": false,
+	"Validate_ac": true,
+	"FunctionalLocation_fc": 9,
+	"Update_mc": false,
+	"to_PermitNatureOfWork_oc": false,
+	"to_PermitProtEquip_oc": false,
+	"to_PermitSftyPrecaution_oc": true,
+	"to_TechnicalObject_oc": false,
+	"to_WorkPermitApproval_oc": true,
+	"to_WorkPermitLongTxt_oc": true,
+	"to_WorkPermitOrder_oc": true,
+	"to_WorkPermitOrderOperation_oc": false,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "WorkPermit 6",
+	"WorkPermitInternalID": "WorkPermitInternalID 6",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 6",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 6",
+	"ValidationScenarioID": "ValidationScenarioID 6",
+	"WorkPermitType": "WorkPermitType 6",
+	"WrkPermitDesc": "WrkPermitDesc 6",
+	"WrkPermitValidFrmDate": "/Date(996045150000)/",
+	"WrkPermitValidFrmTime": "PT12H58M13S",
+	"WrkPermitValidToDate": "/Date(1079421150000)/",
+	"WrkPermitValidToTime": "PT20H33M3S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 6",
+	"WorkCenter": "WorkCenter 6",
+	"WorkCenterText": "WorkCenterText 6",
+	"ObjectTypeCode": "ObjectTypeCode 6",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 6",
+	"WorkCenterPlant": "WorkCenterPlant 6",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 6",
+	"CreatedByUser": "CreatedByUser 6",
+	"CreatedByUserName": "CreatedByUserName 6",
+	"CreationDateTime": "/Date(1362553950000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 6",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 6",
+	"LastChangedByUserName": "LastChangedByUserName 6",
+	"LastChangeDateTime": "/Date(1466925150000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 6",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 6",
+	"WrkPermitHasMaintRemark": false,
+	"WrkPermitHasOpRemark": true,
+	"TechnicalObject": "TechnicalObject 6",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 6",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 6",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 6",
+	"MaintenancePlant": "MaintenancePlant 6",
+	"MaintenancePlantName": "MaintenancePlantName 6",
+	"SearchURLAddress": "SearchURLAddress 6",
+	"PlantSection": "PlantSection 6",
+	"PlantSectionDesc": "PlantSectionDesc 6",
+	"AssetLocation": "AssetLocation 6",
+	"LocationName": "LocationName 6",
+	"AssetRoom": "AssetRoom 6",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 6",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 6",
+	"WorkPermitHasLongText": true,
+	"WorkPermitLongText": "WorkPermitLongText 6",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 6",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 6",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 6",
+	"MaintenanceOrder": "MaintenanceOrder 6",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": false,
+	"DraftUUID": "441c603e-dd70-4b38-9a1f-a0690d3c438f",
+	"DraftEntityCreationDateTime": "/Date(1562310750000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(974877150000+0000)/",
+	"HasActiveEntity": false,
+	"IsActiveEntity": true,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%206',DraftUUID=guid'441c603e-dd70-4b38-9a1f-a0690d3c438f',IsActiveEntity=true)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": true,
+	"CheckAuthorization_ac": false,
+	"Edit_ac": true,
+	"SetDeletionFlag_ac": true,
+	"UnassignJobs_ac": false,
+	"Validate_ac": false,
+	"FunctionalLocation_fc": 2,
+	"Update_mc": false,
+	"to_PermitNatureOfWork_oc": true,
+	"to_PermitProtEquip_oc": false,
+	"to_PermitSftyPrecaution_oc": true,
+	"to_TechnicalObject_oc": false,
+	"to_WorkPermitApproval_oc": false,
+	"to_WorkPermitLongTxt_oc": false,
+	"to_WorkPermitOrder_oc": false,
+	"to_WorkPermitOrderOperation_oc": true,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "WorkPermit 7",
+	"WorkPermitInternalID": "WorkPermitInternalID 7",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 7",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 7",
+	"ValidationScenarioID": "ValidationScenarioID 7",
+	"WorkPermitType": "WorkPermitType 7",
+	"WrkPermitDesc": "WrkPermitDesc 7",
+	"WrkPermitValidFrmDate": "/Date(1304233950000)/",
+	"WrkPermitValidFrmTime": "PT12H35M23S",
+	"WrkPermitValidToDate": "/Date(1410246750000)/",
+	"WrkPermitValidToTime": "PT1H38M22S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 7",
+	"WorkCenter": "WorkCenter 7",
+	"WorkCenterText": "WorkCenterText 7",
+	"ObjectTypeCode": "ObjectTypeCode 7",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 7",
+	"WorkCenterPlant": "WorkCenterPlant 7",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 7",
+	"CreatedByUser": "CreatedByUser 7",
+	"CreatedByUserName": "CreatedByUserName 7",
+	"CreationDateTime": "/Date(1174893150000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 7",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 7",
+	"LastChangedByUserName": "LastChangedByUserName 7",
+	"LastChangeDateTime": "/Date(1446880350000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 7",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 7",
+	"WrkPermitHasMaintRemark": true,
+	"WrkPermitHasOpRemark": true,
+	"TechnicalObject": "TechnicalObject 7",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 7",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 7",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 7",
+	"MaintenancePlant": "MaintenancePlant 7",
+	"MaintenancePlantName": "MaintenancePlantName 7",
+	"SearchURLAddress": "SearchURLAddress 7",
+	"PlantSection": "PlantSection 7",
+	"PlantSectionDesc": "PlantSectionDesc 7",
+	"AssetLocation": "AssetLocation 7",
+	"LocationName": "LocationName 7",
+	"AssetRoom": "AssetRoom 7",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 7",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 7",
+	"WorkPermitHasLongText": false,
+	"WorkPermitLongText": "WorkPermitLongText 7",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 7",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 7",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 7",
+	"MaintenanceOrder": "MaintenanceOrder 7",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": true,
+	"DraftUUID": "658623b9-7ca1-44bc-a235-ebc5110634a6",
+	"DraftEntityCreationDateTime": "/Date(1532761950000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(1278054750000+0000)/",
+	"HasActiveEntity": false,
+	"IsActiveEntity": false,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%207',DraftUUID=guid'658623b9-7ca1-44bc-a235-ebc5110634a6',IsActiveEntity=false)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": true,
+	"CheckAuthorization_ac": false,
+	"Edit_ac": false,
+	"SetDeletionFlag_ac": true,
+	"UnassignJobs_ac": true,
+	"Validate_ac": true,
+	"FunctionalLocation_fc": 0,
+	"Update_mc": false,
+	"to_PermitNatureOfWork_oc": true,
+	"to_PermitProtEquip_oc": true,
+	"to_PermitSftyPrecaution_oc": true,
+	"to_TechnicalObject_oc": true,
+	"to_WorkPermitApproval_oc": false,
+	"to_WorkPermitLongTxt_oc": true,
+	"to_WorkPermitOrder_oc": false,
+	"to_WorkPermitOrderOperation_oc": true,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "WorkPermit 8",
+	"WorkPermitInternalID": "WorkPermitInternalID 8",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 8",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 8",
+	"ValidationScenarioID": "ValidationScenarioID 8",
+	"WorkPermitType": "WorkPermitType 8",
+	"WrkPermitDesc": "WrkPermitDesc 8",
+	"WrkPermitValidFrmDate": "/Date(984985950000)/",
+	"WrkPermitValidFrmTime": "PT21H45M32S",
+	"WrkPermitValidToDate": "/Date(1557645150000)/",
+	"WrkPermitValidToTime": "PT9H15M24S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 8",
+	"WorkCenter": "WorkCenter 8",
+	"WorkCenterText": "WorkCenterText 8",
+	"ObjectTypeCode": "ObjectTypeCode 8",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 8",
+	"WorkCenterPlant": "WorkCenterPlant 8",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 8",
+	"CreatedByUser": "CreatedByUser 8",
+	"CreatedByUserName": "CreatedByUserName 8",
+	"CreationDateTime": "/Date(1495005150000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 8",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 8",
+	"LastChangedByUserName": "LastChangedByUserName 8",
+	"LastChangeDateTime": "/Date(1036739550000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 8",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 8",
+	"WrkPermitHasMaintRemark": false,
+	"WrkPermitHasOpRemark": true,
+	"TechnicalObject": "TechnicalObject 8",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 8",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 8",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 8",
+	"MaintenancePlant": "MaintenancePlant 8",
+	"MaintenancePlantName": "MaintenancePlantName 8",
+	"SearchURLAddress": "SearchURLAddress 8",
+	"PlantSection": "PlantSection 8",
+	"PlantSectionDesc": "PlantSectionDesc 8",
+	"AssetLocation": "AssetLocation 8",
+	"LocationName": "LocationName 8",
+	"AssetRoom": "AssetRoom 8",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 8",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 8",
+	"WorkPermitHasLongText": false,
+	"WorkPermitLongText": "WorkPermitLongText 8",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 8",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 8",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 8",
+	"MaintenanceOrder": "MaintenanceOrder 8",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": false,
+	"DraftUUID": "c24a3536-99f0-427b-8e0e-3774651a81c8",
+	"DraftEntityCreationDateTime": "/Date(1054537950000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(947229150000+0000)/",
+	"HasActiveEntity": true,
+	"IsActiveEntity": false,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%208',DraftUUID=guid'c24a3536-99f0-427b-8e0e-3774651a81c8',IsActiveEntity=false)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": false,
+	"CheckAuthorization_ac": false,
+	"Edit_ac": true,
+	"SetDeletionFlag_ac": false,
+	"UnassignJobs_ac": false,
+	"Validate_ac": false,
+	"FunctionalLocation_fc": 6,
+	"Update_mc": true,
+	"to_PermitNatureOfWork_oc": true,
+	"to_PermitProtEquip_oc": false,
+	"to_PermitSftyPrecaution_oc": false,
+	"to_TechnicalObject_oc": false,
+	"to_WorkPermitApproval_oc": true,
+	"to_WorkPermitLongTxt_oc": false,
+	"to_WorkPermitOrder_oc": true,
+	"to_WorkPermitOrderOperation_oc": true,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "WorkPermit 9",
+	"WorkPermitInternalID": "WorkPermitInternalID 9",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 9",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 9",
+	"ValidationScenarioID": "ValidationScenarioID 9",
+	"WorkPermitType": "WorkPermitType 9",
+	"WrkPermitDesc": "WrkPermitDesc 9",
+	"WrkPermitValidFrmDate": "/Date(1435993950000)/",
+	"WrkPermitValidFrmTime": "PT21H37M44S",
+	"WrkPermitValidToDate": "/Date(1098688350000)/",
+	"WrkPermitValidToTime": "PT22H35M18S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 9",
+	"WorkCenter": "WorkCenter 9",
+	"WorkCenterText": "WorkCenterText 9",
+	"ObjectTypeCode": "ObjectTypeCode 9",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 9",
+	"WorkCenterPlant": "WorkCenterPlant 9",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 9",
+	"CreatedByUser": "CreatedByUser 9",
+	"CreatedByUserName": "CreatedByUserName 9",
+	"CreationDateTime": "/Date(1485933150000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 9",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 9",
+	"LastChangedByUserName": "LastChangedByUserName 9",
+	"LastChangeDateTime": "/Date(1516518750000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 9",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 9",
+	"WrkPermitHasMaintRemark": true,
+	"WrkPermitHasOpRemark": false,
+	"TechnicalObject": "TechnicalObject 9",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 9",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 9",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 9",
+	"MaintenancePlant": "MaintenancePlant 9",
+	"MaintenancePlantName": "MaintenancePlantName 9",
+	"SearchURLAddress": "SearchURLAddress 9",
+	"PlantSection": "PlantSection 9",
+	"PlantSectionDesc": "PlantSectionDesc 9",
+	"AssetLocation": "AssetLocation 9",
+	"LocationName": "LocationName 9",
+	"AssetRoom": "AssetRoom 9",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 9",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 9",
+	"WorkPermitHasLongText": false,
+	"WorkPermitLongText": "WorkPermitLongText 9",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 9",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 9",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 9",
+	"MaintenanceOrder": "MaintenanceOrder 9",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": false,
+	"DraftUUID": "d7768341-a0b3-4056-8b57-638fa6e7c8cf",
+	"DraftEntityCreationDateTime": "/Date(1293952350000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(1546067550000+0000)/",
+	"HasActiveEntity": true,
+	"IsActiveEntity": true,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%209',DraftUUID=guid'd7768341-a0b3-4056-8b57-638fa6e7c8cf',IsActiveEntity=true)/to_WorkPermitStatus"
+		}
+	}
+}, {
+	"Cancel_ac": false,
+	"CheckAuthorization_ac": true,
+	"Edit_ac": false,
+	"SetDeletionFlag_ac": false,
+	"UnassignJobs_ac": true,
+	"Validate_ac": true,
+	"FunctionalLocation_fc": 9,
+	"Update_mc": true,
+	"to_PermitNatureOfWork_oc": false,
+	"to_PermitProtEquip_oc": true,
+	"to_PermitSftyPrecaution_oc": true,
+	"to_TechnicalObject_oc": false,
+	"to_WorkPermitApproval_oc": false,
+	"to_WorkPermitLongTxt_oc": false,
+	"to_WorkPermitOrder_oc": false,
+	"to_WorkPermitOrderOperation_oc": false,
+	"to_WorkPermitPartner_oc": true,
+	"WorkPermit": "WorkPermit 10",
+	"WorkPermitInternalID": "WorkPermitInternalID 10",
+	"MaintenancePlanningPlant": "MaintenancePlanningPlant 10",
+	"WrkPmtOrdOpAssgmtIsAllowed": false,
+	"WorkPermitExternalNumber": "WorkPermitExternalNumber 10",
+	"ValidationScenarioID": "ValidationScenarioID 10",
+	"WorkPermitType": "WorkPermitType 10",
+	"WrkPermitDesc": "WrkPermitDesc 10",
+	"WrkPermitValidFrmDate": "/Date(1495955550000)/",
+	"WrkPermitValidFrmTime": "PT2H18M56S",
+	"WrkPermitValidToDate": "/Date(1105341150000)/",
+	"WrkPermitValidToTime": "PT11H20M14S",
+	"MaintenancePlannerGroup": "MaintenancePlannerGroup 10",
+	"WorkCenter": "WorkCenter 10",
+	"WorkCenterText": "WorkCenterText 10",
+	"ObjectTypeCode": "ObjectTypeCode 10",
+	"OperationWorkCenterInternalID": "OperationWorkCenterInternalID 10",
+	"WorkCenterPlant": "WorkCenterPlant 10",
+	"TechObjAuthorizationGroup": "TechObjAuthorizationGroup 10",
+	"CreatedByUser": "CreatedByUser 10",
+	"CreatedByUserName": "CreatedByUserName 10",
+	"CreationDateTime": "/Date(1259737950000+0000)/",
+	"LastChangedByUser": "LastChangedByUser 10",
+	"VersionLastChangedByUser": "VersionLastChangedByUser 10",
+	"LastChangedByUserName": "LastChangedByUserName 10",
+	"LastChangeDateTime": "/Date(1330413150000+0000)/",
+	"WrkPmtMgmtObjSubType": "WrkPmtMgmtObjSubType 10",
+	"ValidFromDateTime": "\/Date(1661320800000+0000)\/",
+	"ValidToDateTime": "\/Date(1861608800000+0000)\/",
+	"FunctionalLocation": "FunctionalLocation 10",
+	"WrkPermitHasMaintRemark": false,
+	"WrkPermitHasOpRemark": false,
+	"TechnicalObject": "TechnicalObject 10",
+	"TechnicalObjectLabel": "TechnicalObjectLabel 10",
+	"TechnicalObjectDescription": "TechnicalObjectDescription 10",
+	"TechObjIsEquipOrFuncnlLoc": "TechObjIsEquipOrFuncnlLoc 10",
+	"MaintenancePlant": "MaintenancePlant 10",
+	"MaintenancePlantName": "MaintenancePlantName 10",
+	"SearchURLAddress": "SearchURLAddress 10",
+	"PlantSection": "PlantSection 10",
+	"PlantSectionDesc": "PlantSectionDesc 10",
+	"AssetLocation": "AssetLocation 10",
+	"LocationName": "LocationName 10",
+	"AssetRoom": "AssetRoom 10",
+	"MaintenancePlanningPlantName": "MaintenancePlanningPlantName 10",
+	"MaintenancePlannerGroupName": "MaintenancePlannerGroupName 10",
+	"WorkPermitHasLongText": false,
+	"WorkPermitLongText": "WorkPermitLongText 10",
+	"WorkPermitReferenceObjectType": "WorkPermitReferenceObjectType 10",
+	"WorkPermitReferenceObjTypeDesc": "WorkPermitReferenceObjTypeDesc 10",
+	"WorkPermitTypeDescription": "WorkPermitTypeDescription 10",
+	"MaintenanceOrder": "MaintenanceOrder 10",
+	"WrkPmtCnctntdActvSystSts": "CRTE",
+	"HasDraftEntity": false,
+	"DraftUUID": "bacdbc12-f448-4e7f-bdae-9ce14afff810",
+	"DraftEntityCreationDateTime": "/Date(1219129950000+0000)/",
+	"DraftEntityLastChangeDateTime": "/Date(1440227550000+0000)/",
+	"HasActiveEntity": true,
+	"IsActiveEntity": true,
+	"__metadata": {
+		"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)",
+		"type": "cds_ui_workpermit.WorkPermitType"
+	},
+	"DraftAdministrativeData": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/DraftAdministrativeData"
+		}
+	},
+	"SiblingEntity": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/SiblingEntity"
+		}
+	},
+	"to_PermitNatureOfWork": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_PermitNatureOfWork"
+		}
+	},
+	"to_PermitProtEquip": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_PermitProtEquip"
+		}
+	},
+	"to_PermitSftyPrecaution": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_PermitSftyPrecaution"
+		}
+	},
+	"to_TechnicalObject": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_TechnicalObject"
+		}
+	},
+	"to_WorkPermitApproval": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_WorkPermitApproval"
+		}
+	},
+	"to_WorkPermitLongTxt": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_WorkPermitLongTxt"
+		}
+	},
+	"to_WorkPermitOrder": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_WorkPermitOrder"
+		}
+	},
+	"to_WorkPermitOrderOperation": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_WorkPermitOrderOperation"
+		}
+	},
+	"to_WorkPermitPartner": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_WorkPermitPartner"
+		}
+	},
+	"to_WorkPermitStatus": {
+		"__deferred": {
+			"uri": "WorkPermit(WorkPermit='WorkPermit%2010',DraftUUID=guid'bacdbc12-f448-4e7f-bdae-9ce14afff810',IsActiveEntity=true)/to_WorkPermitStatus"
+		}
+	}
+}]

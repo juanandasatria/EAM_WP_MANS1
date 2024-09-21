@@ -1,0 +1,8 @@
+<!--
+
+    Copyright (C) 2009-2023 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core='sap.ui.core'>
+	<Button id="permitButtonAddPPE" tooltip="{i18n>Button.AddOrder}" text="{i18n>Button.AddOrder}" press="onOpenValueHelp"/>
+</core:FragmentDefinition>
